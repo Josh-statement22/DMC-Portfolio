@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ArrowUp, ChevronDown } from "lucide-react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import logo from "../assets/img/dmc-logo.png";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -8,12 +10,29 @@ function Navbar() {
   const [mobileAboutDropdown, setMobileAboutDropdown] = useState(false);
   const [projectsDropdown, setProjectsDropdown] = useState(false);
   const [mobileProjectsDropdown, setMobileProjectsDropdown] = useState(false);
+  const location = useLocation();
+
   const dropdownTimeoutRef = useRef(null);
   const projectsTimeoutRef = useRef(null);
 
-  const navLinks = ["Home", "About Us", "Products & Services", "Projects", "Contact"];
-  const aboutSubLinks = ["Core/Values", "Corporate Responsibility", "Business Information"];
-  const projectsSubLinks = ["Major Clients"];
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Products & Services", path: "/services" },
+    { name: "Projects", path: "/projects" },
+    { name: "Organization", path: "/about" },
+  ];
+
+  const aboutSubLinks = [
+    { name: "Core/Values", path: "/core-values" },
+    { name: "Corporate Responsibility", path: "/corporate-responsibility" },
+    { name: "Business Information", path: "/business-information" },
+  ];
+
+  const projectsSubLinks = [
+    { name: "Finished Contracts", path: "/finished-contracts" },
+    { name: "Valued Clients", path: "/valued-clients" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setShowButton(window.scrollY > 300);
@@ -22,9 +41,7 @@ function Navbar() {
   }, []);
 
   const handleAboutMouseEnter = () => {
-    if (dropdownTimeoutRef.current) {
-      clearTimeout(dropdownTimeoutRef.current);
-    }
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
     setAboutDropdown(true);
   };
 
@@ -35,9 +52,7 @@ function Navbar() {
   };
 
   const handleProjectsMouseEnter = () => {
-    if (projectsTimeoutRef.current) {
-      clearTimeout(projectsTimeoutRef.current);
-    }
+    if (projectsTimeoutRef.current) clearTimeout(projectsTimeoutRef.current);
     setProjectsDropdown(true);
   };
 
@@ -49,165 +64,219 @@ function Navbar() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
+  const isAboutActive =
+    location.pathname === "/about" || aboutSubLinks.some((link) => link.path === location.pathname);
+  const isProjectsActive =
+    location.pathname === "/projects" || projectsSubLinks.some((link) => link.path === location.pathname);
+
+  const desktopLinkClass = ({ isActive }) =>
+    `group relative pb-1 transition-colors duration-300 ${
+      isActive ? "text-slate-900" : "text-slate-700 hover:text-slate-900"
+    }`;
+
   return (
     <>
-      <nav className="bg-white text-black w-full z-50 shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-
-          {/* Logo + Text Left */}
+      <nav className="sticky top-0 bg-white/95 backdrop-blur border-b border-slate-200/80 text-black w-full z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center">
-            <img src="./src/assets/img/dmc-logo.png"  className="h-10 md:h-20"/>
-            <span className="text-2xl md:text-1xl font-extrabold tracking-wide"></span>
+            <Link to="/" className="flex items-center">
+              <img src={logo} alt="DMC logo" className="h-11 md:h-12 w-auto" />
+            </Link>
           </div>
 
-          {/* Links Right (Desktop) */}
-          <div className="hidden md:flex gap-10 font-medium">
+          <div className="hidden md:flex items-center gap-9 font-medium text-[15px]">
             {navLinks.map((link) =>
-              link === "About Us" ? (
+              link.name === "About Us" ? (
                 <div
-                  key={link}
-                  className="relative group cursor-pointer"
+                  key={link.name}
+                  className="relative"
                   onMouseEnter={handleAboutMouseEnter}
                   onMouseLeave={handleAboutMouseLeave}
                 >
-                  <span className="relative group flex items-center gap-1">
-                    About Us
-                    <ChevronDown size={18} className={`transition-transform duration-3 ${aboutDropdown ? 'rotate-180' : ''}`} />
-                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                  </span>
+                  <div
+                    className={`group relative flex items-center gap-1 cursor-pointer transition-colors duration-300 pb-1 ${
+                      isAboutActive ? "text-slate-900" : "text-slate-700 hover:text-slate-900"
+                    }`}
+                  >
+                    <span>{link.name}</span>
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform duration-300 ${aboutDropdown ? "rotate-180" : ""}`}
+                    />
+                    <span
+                      className={`absolute -bottom-1 left-0 h-0.5 bg-blue-700 transition-all duration-300 ${
+                        isAboutActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </div>
 
                   {aboutDropdown && (
-                    <div className="absolute top-full left-0 mt-2 bg-white border shadow-md rounded-md w-48 py-2 z-50">
+                    <div className="absolute top-full left-0 mt-3 bg-white border border-slate-200 shadow-xl rounded-lg w-56 p-2 z-50">
                       {aboutSubLinks.map((subLink) => (
-                        <a
-                          key={subLink}
-                          href="#"
-                          className="block px-4 py-2 text-black hover:bg-blue-50 transition"
+                        <Link
+                          key={subLink.name}
+                          to={subLink.path}
+                          className="block rounded-md px-3 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-900 transition-all duration-200 hover:translate-x-1"
                         >
-                          {subLink}
-                        </a>
+                          {subLink.name}
+                        </Link>
                       ))}
                     </div>
                   )}
                 </div>
-              ) : link === "Projects" ? (
+              ) : link.name === "Projects" ? (
                 <div
-                  key={link}
-                  className="relative group cursor-pointer"
+                  key={link.name}
+                  className="relative"
                   onMouseEnter={handleProjectsMouseEnter}
                   onMouseLeave={handleProjectsMouseLeave}
                 >
-                  <span className="relative group flex items-center gap-1">
-                    Projects
-                    <ChevronDown size={18} className={`transition-transform duration-3 ${projectsDropdown ? 'rotate-180' : ''}`} />
-                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                  </span>
+                  <div
+                    className={`group relative flex items-center gap-1 cursor-pointer transition-colors duration-300 pb-1 ${
+                      isProjectsActive ? "text-slate-900" : "text-slate-700 hover:text-slate-900"
+                    }`}
+                  >
+                    <span>{link.name}</span>
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform duration-300 ${projectsDropdown ? "rotate-180" : ""}`}
+                    />
+                    <span
+                      className={`absolute -bottom-1 left-0 h-0.5 bg-blue-700 transition-all duration-300 ${
+                        isProjectsActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </div>
 
                   {projectsDropdown && (
-                    <div className="absolute top-full left-0 mt-2 bg-white border shadow-md rounded-md w-48 py-2 z-50">
+                    <div className="absolute top-full left-0 mt-3 bg-white border border-slate-200 shadow-xl rounded-lg w-56 p-2 z-50">
                       {projectsSubLinks.map((subLink) => (
-                        <a
-                          key={subLink}
-                          href="#"
-                          className="block px-4 py-2 text-black hover:bg-blue-50 transition"
+                        <Link
+                          key={subLink.name}
+                          to={subLink.path}
+                          className="block rounded-md px-3 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-900 transition-all duration-200 hover:translate-x-1"
                         >
-                          {subLink}
-                        </a>
+                          {subLink.name}
+                        </Link>
                       ))}
                     </div>
                   )}
                 </div>
               ) : (
-                <a
-                  key={link}
-                  href="#"
-                  className="relative group"
-                >
-                  {link}
-                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                <NavLink key={link.name} to={link.path} className={desktopLinkClass}>
+                  {({ isActive }) => (
+                    <>
+                      {link.name}
+                      <span
+                        className={`absolute -bottom-1 left-0 h-0.5 bg-blue-700 transition-all duration-300 ${
+                          isActive ? "w-full" : "w-0 group-hover:w-full"
+                        }`}
+                      />
+                    </>
+                  )}
+                </NavLink>
               )
             )}
+            <Link
+              to="/contact"
+              className="ml-2 px-5 py-2.5 rounded-md bg-slate-900 text-white hover:bg-slate-800 hover:-translate-y-0.5 transition-all duration-300 shadow-sm hover:shadow-md"
+            >
+              Get in Touch
+            </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button onClick={() => setOpen(!open)}>
-              {open ? <X size={28} /> : <Menu size={28} />}
+            <button onClick={() => setOpen(!open)} className="text-slate-900">
+              {open ? <X size={26} /> : <Menu size={26} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Dropdown */}
         {open && (
-          <div className="md:hidden bg-white px-6 py-6 space-y-2 font-medium border-t">
+          <div className="md:hidden bg-white px-6 py-6 space-y-3 font-medium border-t border-slate-200">
             {navLinks.map((link) =>
-              link === "About" ? (
-                <div key={link}>
+              link.name === "About Us" ? (
+                <div key={link.name}>
                   <button
-                    className="w-full text-left flex justify-between items-center border-b pb-2 hover:text-blue-600 transition"
+                    className="w-full flex justify-between items-center text-slate-800 hover:text-blue-900 transition-colors duration-300"
                     onClick={() => setMobileAboutDropdown(!mobileAboutDropdown)}
                   >
-                    About
-                    <ChevronDown size={20} className={`transition-transform duration-300 ${mobileAboutDropdown ? 'rotate-180' : ''}`} />
+                    {link.name}
+                    <ChevronDown
+                      size={20}
+                      className={`transition-transform ${mobileAboutDropdown ? "rotate-180" : ""}`}
+                    />
                   </button>
+
                   {mobileAboutDropdown && (
-                    <div className="pl-4 mt-2 space-y-1">
+                    <div className="pl-4 mt-2 space-y-2">
                       {aboutSubLinks.map((subLink) => (
-                        <a
-                          key={subLink}
-                          href="#"
-                          className="block hover:text-blue-600 transition"
+                        <Link
+                          key={subLink.name}
+                          to={subLink.path}
+                          onClick={() => setOpen(false)}
+                          className="block rounded-md px-3 py-2 text-slate-600 hover:text-blue-900 hover:bg-blue-50 transition-all duration-200"
                         >
-                          {subLink}
-                        </a>
+                          {subLink.name}
+                        </Link>
                       ))}
                     </div>
                   )}
                 </div>
-              ) : link === "Projects" ? (
-                <div key={link}>
+              ) : link.name === "Projects" ? (
+                <div key={link.name}>
                   <button
-                    className="w-full text-left flex justify-between items-center border-b pb-2 hover:text-blue-600 transition"
+                    className="w-full flex justify-between items-center text-slate-800 hover:text-blue-900 transition-colors duration-300"
                     onClick={() => setMobileProjectsDropdown(!mobileProjectsDropdown)}
                   >
-                    Projects
-                    <ChevronDown size={20} className={`transition-transform duration-300 ${mobileProjectsDropdown ? 'rotate-180' : ''}`} />
+                    {link.name}
+                    <ChevronDown
+                      size={20}
+                      className={`transition-transform ${mobileProjectsDropdown ? "rotate-180" : ""}`}
+                    />
                   </button>
+
                   {mobileProjectsDropdown && (
-                    <div className="pl-4 mt-2 space-y-1">
+                    <div className="pl-4 mt-2 space-y-2">
                       {projectsSubLinks.map((subLink) => (
-                        <a
-                          key={subLink}
-                          href="#"
-                          className="block hover:text-blue-600 transition"
+                        <Link
+                          key={subLink.name}
+                          to={subLink.path}
+                          onClick={() => setOpen(false)}
+                          className="block rounded-md px-3 py-2 text-slate-600 hover:text-blue-900 hover:bg-blue-50 transition-all duration-200"
                         >
-                          {subLink}
-                        </a>
+                          {subLink.name}
+                        </Link>
                       ))}
                     </div>
                   )}
                 </div>
               ) : (
-                <a
-                  key={link}
-                  href="#"
-                  className="block border-b pb-2 hover:text-blue-600 transition"
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-md px-3 py-2 text-slate-800 hover:text-blue-900 hover:bg-blue-50 transition-all duration-200"
                 >
-                  {link}
-                </a>
+                  {link.name}
+                </Link>
               )
             )}
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="inline-flex px-5 py-2.5 rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-all duration-300 shadow-sm hover:shadow-md"
+            >
+              Get in Touch
+            </Link>
           </div>
         )}
       </nav>
 
-      {/* Scroll Up Button */}
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed right-6 bottom-6 bg-blue-600 hover:bg-blue-500 text-white p-4 rounded-full shadow-lg transition"
-          title="Scroll to Top"
+          className="fixed right-6 bottom-6 bg-blue-600 text-white p-4 rounded-full shadow-lg"
         >
           <ArrowUp size={24} />
         </button>
