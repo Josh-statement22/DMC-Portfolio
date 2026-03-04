@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Home() {
   const ui = {
     section: 'py-24 px-4 sm:px-6 lg:px-8',
     container: 'max-w-7xl mx-auto',
     eyebrow: 'text-xs uppercase tracking-[0.24em] text-blue-700 mb-4',
-    heading: 'text-4xl sm:text-5xl font-bold text-blue-950 tracking-tight',
+    eyebrowSection: 'text-sm sm:text-base uppercase tracking-[0.2em] text-blue-700 mb-4 font-semibold',
+    heading: 'text-5xl sm:text-6xl font-bold text-blue-950 tracking-tight',
+    headingSection: 'text-3xl sm:text-4xl font-bold text-blue-950 tracking-tight',
     primaryBtn:
       'px-8 py-3 bg-blue-800 text-white hover:bg-blue-900 rounded-md font-semibold inline-flex items-center gap-2 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2',
     secondaryBtn:
@@ -117,10 +119,30 @@ export default function Home() {
     },
   ];
   const productCategories = [
-    { name: 'Heavy Machinery', image: 'https://images.unsplash.com/photo-1580901368919-7738efb0f87e?auto=format&fit=crop&w=1200&q=80' },
-    { name: 'Structural Steel', image: 'https://images.unsplash.com/photo-1590494165264-1ebe3602eb80?auto=format&fit=crop&w=1200&q=80' },
-    { name: 'Industrial Valves', image: 'https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1200&q=80' },
-    { name: 'Process Piping', image: 'https://images.unsplash.com/photo-1624397640148-949b1732bb0a?auto=format&fit=crop&w=1200&q=80' },
+    {
+      name: 'Heavy Machinery',
+      image: 'https://images.unsplash.com/photo-1580901368919-7738efb0f87e?auto=format&fit=crop&w=1200&q=80',
+      useCase: 'Earthworks and heavy lifting',
+      leadTime: '5-10 days',
+    },
+    {
+      name: 'Structural Steel',
+      image: 'https://images.unsplash.com/photo-1590494165264-1ebe3602eb80?auto=format&fit=crop&w=1200&q=80',
+      useCase: 'Bridges and industrial frames',
+      leadTime: '3-7 days',
+    },
+    {
+      name: 'Industrial Valves',
+      image: 'https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1200&q=80',
+      useCase: 'Flow control and safety systems',
+      leadTime: '2-5 days',
+    },
+    {
+      name: 'Process Piping',
+      image: 'https://images.unsplash.com/photo-1624397640148-949b1732bb0a?auto=format&fit=crop&w=1200&q=80',
+      useCase: 'Plant and utility lines',
+      leadTime: '4-8 days',
+    },
   ];
   const specializedServices = [
     {
@@ -202,6 +224,39 @@ export default function Home() {
       image: 'https://images.unsplash.com/photo-1610024062303-e355e94c7a8f?auto=format&fit=crop&w=900&q=80',
     },
   ];
+  const trustHighlights = [
+    'ISO-Aligned Quality Systems',
+    '24/7 Technical Response',
+    'Nationwide Project Support',
+    'Safety-First Execution Culture',
+  ];
+  const differentiators = [
+    {
+      title: 'Execution Discipline',
+      value: '98%',
+      detail: 'On-time milestone performance across managed project scopes.',
+    },
+    {
+      title: 'Technical Depth',
+      value: '120+',
+      detail: 'Engineers and specialists supporting complex environments.',
+    },
+    {
+      title: 'Mobilization Speed',
+      value: '72 hrs',
+      detail: 'Average deployment window for urgent operational requirements.',
+    },
+    {
+      title: 'Quality Assurance',
+      value: '100%',
+      detail: 'Inspection-driven delivery process from planning to turnover.',
+    },
+  ];
+  const legalCredentialSlots = [
+    'SEC Registration',
+    'BIR Certificate of Registration',
+    'Business Permit',
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -212,18 +267,30 @@ export default function Home() {
   }, [heroSlides.length]);
 
   const [activeSector, setActiveSector] = useState(marketSectors[0].key);
-  const [sectorVisible, setSectorVisible] = useState(true);
   const [activeService, setActiveService] = useState(null);
+  const [activeProductSlide, setActiveProductSlide] = useState(0);
 
   useEffect(() => {
-    setSectorVisible(false);
-    const timer = setTimeout(() => setSectorVisible(true), 160);
-    return () => clearTimeout(timer);
-  }, [activeSector]);
+    const interval = setInterval(() => {
+      setActiveProductSlide((prev) => (prev + 1) % productCategories.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [productCategories.length]);
 
   const currentSlide = heroSlides[activeSlide];
   const selectedSector = marketSectors.find((sector) => sector.key === activeSector) || marketSectors[0];
-  const SectionDivider = () => (
+  const visibleProductCount = Math.min(3, productCategories.length);
+  const visibleProductCards = Array.from({ length: visibleProductCount }, (_, index) => {
+    const itemIndex = (activeProductSlide + index) % productCategories.length;
+    return productCategories[itemIndex];
+  });
+  const goToNextProductSlide = () => {
+    setActiveProductSlide((prev) => (prev + 1) % productCategories.length);
+  };
+  const goToPrevProductSlide = () => {
+    setActiveProductSlide((prev) => (prev - 1 + productCategories.length) % productCategories.length);
+  };
+  const sectionDivider = (
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="h-px bg-gradient-to-r from-transparent via-blue-300 to-transparent" />
@@ -317,26 +384,48 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <SectionDivider />
+
+      <section className="px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
+        <div className="max-w-7xl mx-auto rounded-2xl border border-blue-200 bg-white shadow-lg p-5 sm:p-6">
+          <div className="grid lg:grid-cols-12 gap-5 items-center">
+            <div className="lg:col-span-4">
+              <p className="text-xs uppercase tracking-[0.18em] text-blue-700 font-semibold mb-2">Trusted by Industry Leaders</p>
+              <p className="text-blue-900/80 text-sm">Built for enterprise clients that require reliability, compliance, and speed.</p>
+            </div>
+            <div className="lg:col-span-8 flex flex-wrap gap-2.5">
+              {trustHighlights.map((item) => (
+                <span
+                  key={item}
+                  className="px-4 py-2 rounded-full border border-blue-200 bg-blue-50 text-blue-900 text-sm font-medium"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      {sectionDivider}
 
       {/* 3. Market Sectors */}
       <section className={`${ui.section} bg-blue-50/50`}>
         <div className={ui.container}>
           <div className="mb-10 pl-4 border-l-4 border-blue-500">
-            <p className={ui.eyebrow}>Market Sectors / Industries We Serve</p>
-            <h2 className={ui.heading}>Where we are built to deliver.</h2>
+            <p className={ui.eyebrowSection}>Market Sectors / Industries We Serve</p>
+            <h2 className={ui.headingSection}>Where we are built to deliver.</h2>
+            <div className="mt-4 h-1 w-28 rounded-full bg-blue-700" />
           </div>
 
-          <div className="flex flex-wrap gap-6 border-b border-blue-200 mb-10">
+          <div className="flex flex-wrap gap-3 mb-10">
             {marketSectors.map((sector) => (
               <button
                 key={sector.key}
                 type="button"
                 onClick={() => setActiveSector(sector.key)}
-                className={`pb-3 border-b-4 transition-colors ${
+                className={`px-5 py-2.5 rounded-full border transition-all ${
                   sector.key === activeSector
-                    ? 'border-[#F57C00] font-bold text-blue-950'
-                    : 'border-transparent font-medium text-blue-700 hover:text-blue-900'
+                    ? 'bg-blue-900 text-white font-semibold border-blue-900 shadow-md'
+                    : 'bg-white text-blue-700 border-blue-200 hover:bg-blue-50 hover:text-blue-900 font-medium'
                 }`}
               >
                 {sector.title}
@@ -344,18 +433,12 @@ export default function Home() {
             ))}
           </div>
 
-          <div
-            className={`grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch transition-all duration-300 ${
-              sectorVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'
-            }`}
-          >
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch transition-all duration-300">
             <div className="rounded-xl overflow-hidden border border-blue-200">
               <img
                 src={selectedSector.image}
                 alt={selectedSector.title}
-                className={`w-full h-full min-h-[320px] object-cover transition-transform duration-700 ease-out ${
-                  sectorVisible ? 'scale-100' : 'scale-105'
-                }`}
+                className="w-full h-full min-h-[320px] object-cover transition-transform duration-700 ease-out"
               />
             </div>
 
@@ -370,43 +453,85 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <SectionDivider />
+      {sectionDivider}
 
       {/* 4. Featured Product Categories */}
       <section className={`${ui.section} bg-white`}>
         <div className={ui.container}>
-          <div className="mb-10 text-center">
-            <p className={ui.eyebrow}>Featured Product Categories</p>
-            <h2 className={ui.heading}>Bestseller product lines for critical operations.</h2>
+          <div className="mb-10 lg:mb-12">
+            <div className="max-w-3xl">
+              <p className="text-base sm:text-lg uppercase tracking-[0.2em] text-blue-700 mb-4 font-semibold">Our Market</p>
+              <h2 className={ui.headingSection}>High-demand categories for industrial operations.</h2>
+              <div className="mt-4 h-1 w-28 rounded-full bg-blue-700" />
+              <p className="mt-4 text-blue-800/80 text-lg leading-relaxed">
+                A rotating view of our key product categories used across infrastructure, industrial, and plant-based projects.
+              </p>
+            </div>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {productCategories.map((item) => (
-              <article key={item.name} className={`${ui.card} overflow-hidden`}>
-                <img src={item.image} alt={item.name} className="h-44 w-full object-cover" />
-                <div className="p-5 min-h-[112px]">
-                  <h3 className="text-xl font-semibold text-blue-950">{item.name}</h3>
-                  <span className="mt-3 inline-flex items-center gap-2 text-sm text-blue-700">
-                    View Category <ArrowRight size={14} />
-                  </span>
-                </div>
-              </article>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <button className={ui.primaryBtn}>
-              View Full Product Catalog <ArrowRight size={18} />
+
+          <div className="relative">
+            <button
+              type="button"
+              onClick={goToPrevProductSlide}
+              className="absolute left-2 sm:-left-5 top-1/2 -translate-y-1/2 z-10 h-11 w-11 rounded-full border border-blue-200 bg-white/95 text-blue-900 hover:bg-blue-50 transition-colors inline-flex items-center justify-center shadow-md"
+              aria-label="Previous market slide"
+            >
+              <ChevronLeft size={20} />
             </button>
+            <button
+              type="button"
+              onClick={goToNextProductSlide}
+              className="absolute right-2 sm:-right-5 top-1/2 -translate-y-1/2 z-10 h-11 w-11 rounded-full border border-blue-200 bg-white/95 text-blue-900 hover:bg-blue-50 transition-colors inline-flex items-center justify-center shadow-md"
+              aria-label="Next market slide"
+            >
+              <ChevronRight size={20} />
+            </button>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {visibleProductCards.map((item, index) => (
+                <article
+                  key={`${item.name}-${activeProductSlide}-${index}`}
+                  className="relative overflow-hidden rounded-2xl border border-blue-200 bg-blue-100 shadow-sm h-[320px] sm:h-[340px]"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-950/85 via-blue-950/20 to-transparent" />
+                  <div className="absolute left-0 right-0 bottom-0 p-5">
+                    <p className="text-xs uppercase tracking-[0.16em] text-blue-100/90 mb-2">Category</p>
+                    <h3 className="text-2xl font-semibold text-white">{item.name}</h3>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-7 flex items-center justify-center gap-3">
+            {productCategories.map((item, index) => (
+              <button
+                key={`market-dot-${item.name}`}
+                type="button"
+                onClick={() => setActiveProductSlide(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  index === activeProductSlide ? 'w-8 bg-blue-800' : 'w-2 bg-blue-300 hover:bg-blue-400'
+                }`}
+                aria-label={`Show ${item.name}`}
+              />
+            ))}
           </div>
         </div>
       </section>
-      <SectionDivider />
+      {sectionDivider}
 
       {/* 5. Services & Specialization */}
       <section className={`${ui.section} bg-blue-50/50`}>
         <div className={ui.container}>
           <div className="mb-10 pl-4 border-l-4 border-blue-500">
-            <p className={ui.eyebrow}>Services & Expertise</p>
-            <h2 className={ui.heading}>More than supply. We provide total project support.</h2>
+            <p className={ui.eyebrowSection}>Services & Expertise</p>
+            <h2 className={ui.headingSection}>More than supply. We provide total project support.</h2>
+            <div className="mt-4 h-1 w-28 rounded-full bg-blue-700" />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {specializedServices.map((service) => {
@@ -457,34 +582,39 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <SectionDivider />
+      {sectionDivider}
 
-      {/* 6. Legacy Teaser */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-5xl mx-auto text-center rounded-2xl border border-blue-200 bg-blue-50/60 px-6 py-12 sm:px-10">
-          <p className={ui.eyebrow}>The Legacy</p>
-          <h2 className={`${ui.heading} mb-6`}>Built on Integrity, Driven by Innovation.</h2>
-          <p className="text-lg text-blue-800/85 leading-relaxed max-w-4xl mx-auto">
-            Our legacy is grounded in safe execution, reliable quality, and long-term partnerships.
-            We commit to standards that protect people, projects, and performance from planning to delivery.
-          </p>
-          <div className="mt-7 flex items-center justify-center gap-3 text-sm flex-wrap">
-            <Link to="/core-values" className="px-4 py-2 rounded-full bg-white border border-blue-200 text-blue-900 font-semibold hover:bg-blue-50">Core Values</Link>
-            <Link to="/about" className="px-4 py-2 rounded-full bg-white border border-blue-200 text-blue-900 font-semibold hover:bg-blue-50">Corporate Responsibility</Link>
+      {/* 6. Why DMC */}
+      <section className={`${ui.section} bg-white`}>
+        <div className={ui.container}>
+          <div className="mb-10 text-center">
+            <p className={ui.eyebrowSection}>Why DMC</p>
+            <h2 className={ui.headingSection}>A delivery system built for mission-critical operations.</h2>
+            <div className="mt-4 h-1 w-28 rounded-full bg-blue-700 mx-auto" />
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {differentiators.map((item) => (
+              <article key={item.title} className="rounded-2xl border border-blue-200 bg-blue-50/40 p-6">
+                <p className="text-xs uppercase tracking-[0.18em] text-blue-700 font-semibold mb-2">{item.title}</p>
+                <p className="text-4xl font-bold text-blue-950 mb-3">{item.value}</p>
+                <p className="text-blue-900/80 leading-relaxed">{item.detail}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
-      <SectionDivider />
+      {sectionDivider}
 
       {/* 7. Featured Projects / Case Studies */}
       <section className={`${ui.section} bg-white`}>
         <div className={ui.container}>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
             <div className="pl-4 border-l-4 border-blue-500">
-              <p className={ui.eyebrow}>Featured Projects / Case Studies</p>
-              <h2 className={`${ui.heading} max-w-3xl`}>
+              <p className={ui.eyebrowSection}>Featured Projects / Case Studies</p>
+              <h2 className={`${ui.headingSection} max-w-3xl`}>
                 Proven results on complex, high-stakes programs.
               </h2>
+              <div className="mt-4 h-1 w-28 rounded-full bg-blue-700" />
             </div>
             <button className={`self-start md:self-auto ${ui.secondaryBtn}`}>
               View Project Portfolio <ArrowRight size={18} />
@@ -497,7 +627,9 @@ export default function Home() {
                 <img src={project.image} alt={project.title} className="h-52 w-full object-cover" />
                 <div className="p-6">
                   <h3 className="text-2xl font-semibold text-blue-950 mb-3">{project.title}</h3>
-                  <p className="text-blue-800/85 mb-4">{project.supply}</p>
+                  <p className="text-xs uppercase tracking-[0.16em] text-blue-700 font-semibold mb-1">Challenge</p>
+                  <p className="text-blue-800/85 mb-3">{project.supply}</p>
+                  <p className="text-xs uppercase tracking-[0.16em] text-blue-700 font-semibold mb-1">Result</p>
                   <p className="inline-flex items-center gap-2 text-emerald-700 font-semibold">
                     <CheckCircle2 size={16} />
                     {project.outcome}
@@ -508,14 +640,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <SectionDivider />
+      {sectionDivider}
 
       {/* 8. Global/Local Partners */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-50/50 border-y border-blue-200">
         <div className={ui.container}>
           <div className="text-center mb-8">
-            <p className={ui.eyebrow}>Global / Local Partners</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-blue-950">Trusted by leading organizations.</h2>
+            <p className={ui.eyebrowSection}>Global / Local Partners</p>
+            <h2 className={ui.headingSection}>Trusted by leading organizations.</h2>
+            <div className="mt-4 h-1 w-28 rounded-full bg-blue-700 mx-auto" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {partners.map((partner) => (
@@ -534,16 +667,100 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <SectionDivider />
 
-      {/* 9. Final CTA */}
+      <section className={`${ui.section} bg-white`}>
+        <div className={ui.container}>
+          <div className="grid lg:grid-cols-12 gap-8">
+            <article className="lg:col-span-7 rounded-2xl border border-blue-200 bg-white p-6 sm:p-8">
+              <p className={ui.eyebrowSection}>Organizational Strength</p>
+              <h2 className={ui.headingSection}>Leadership and governance built for accountability.</h2>
+              <div className="mt-4 h-1 w-28 rounded-full bg-blue-700" />
+              <p className="mt-5 text-blue-900/80 leading-relaxed">
+                View our full organizational structure and legal credentials to understand how DMC maintains
+                disciplined operations, compliance, and delivery control.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link to="/organizational-structure" className={ui.primaryBtn}>
+                  View Organizational Structure <ArrowRight size={18} />
+                </Link>
+                <Link to="/about" className={ui.secondaryBtn}>
+                  View Company Profile
+                </Link>
+              </div>
+            </article>
+
+            <article className="lg:col-span-5 rounded-2xl border border-blue-200 bg-blue-50/40 p-6 sm:p-8">
+              <p className="text-xs uppercase tracking-[0.18em] text-blue-700 font-semibold mb-4">Legal Credentials</p>
+              <div className="space-y-3">
+                {legalCredentialSlots.map((item) => (
+                  <div key={item} className="rounded-xl border border-blue-200 bg-white px-4 py-3 text-blue-950 font-medium">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      {sectionDivider}
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50/50">
+        <div className={ui.container}>
+          <div className="grid lg:grid-cols-12 gap-8">
+            <article className="lg:col-span-7 rounded-2xl border border-blue-200 bg-white p-6 sm:p-8">
+              <p className={ui.eyebrowSection}>Corporate Responsibility</p>
+              <h2 className={ui.headingSection}>Safe operations, responsible growth, long-term impact.</h2>
+              <div className="mt-4 h-1 w-28 rounded-full bg-blue-700" />
+              <p className="mt-5 text-blue-900/80 leading-relaxed">
+                Our responsibility framework puts safety, health, and environmental standards at the center of every
+                project while promoting meaningful community participation.
+              </p>
+              <Link to="/corporate-responsibility" className="mt-6 inline-flex items-center gap-2 text-blue-800 font-semibold hover:text-blue-900">
+                Explore Responsibility Framework <ArrowRight size={16} />
+              </Link>
+            </article>
+
+            <article className="lg:col-span-5 rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-950 to-blue-900 p-6 sm:p-8 text-white">
+              <p className="text-xs uppercase tracking-[0.18em] text-blue-100/80 font-semibold mb-4">Core Values</p>
+              <div className="flex flex-wrap gap-2">
+                {['Quality', 'Customer Orientation', 'Flexibility', 'Transparency', 'Optimization'].map((value) => (
+                  <span key={value} className="px-3 py-2 rounded-full border border-white/25 bg-white/10 text-sm font-medium">
+                    {value}
+                  </span>
+                ))}
+              </div>
+              <Link to="/core-values" className="mt-6 inline-flex items-center gap-2 text-white font-semibold">
+                Read Our Core Values <ArrowRight size={16} />
+              </Link>
+            </article>
+          </div>
+        </div>
+      </section>
+      {sectionDivider}
+
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-950 via-blue-900 to-blue-950 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to start your next big project? Partner with the industry leader.</h2>
-          <p className="text-blue-100 mb-8">Talk to our team and get a dedicated plan for your project requirements.</p>
-          <button className="px-8 py-3 bg-white text-blue-900 hover:bg-blue-50 rounded-lg font-semibold transition-all duration-300 inline-flex items-center gap-2 shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80">
-            Talk to an Expert Today <ArrowRight size={18} />
-          </button>
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-xs uppercase tracking-[0.24em] text-blue-100 font-semibold mb-4">Ready to Execute</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
+            Plan your next project with a partner built for critical operations.
+          </h2>
+          <p className="text-blue-100 text-lg max-w-3xl mx-auto leading-relaxed mb-8">
+            Tell us your timeline, scope, and project requirements. Our team will respond with a practical execution approach.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              to="/contact"
+              className="px-8 py-3 bg-white text-blue-950 hover:bg-blue-50 rounded-md font-semibold inline-flex items-center gap-2 transition-colors"
+            >
+              Request a Quote <ArrowRight size={18} />
+            </Link>
+            <Link
+              to="/about"
+              className="px-8 py-3 border border-white/60 hover:bg-white/10 rounded-md font-semibold inline-flex items-center gap-2 transition-colors"
+            >
+              View Capability Profile
+            </Link>
+          </div>
         </div>
       </section>
     </div>

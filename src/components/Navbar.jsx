@@ -20,12 +20,12 @@ function Navbar() {
     { name: "About Us", path: "/about" },
     { name: "Products & Services", path: "/services" },
     { name: "Projects", path: "/projects" },
-    { name: "Organization", path: "/about" },
   ];
 
   const aboutSubLinks = [
     { name: "Core/Values", path: "/core-values" },
     { name: "Corporate Responsibility", path: "/corporate-responsibility" },
+    { name: "Organizational Structure", path: "/organizational-structure" },
     { name: "Business Information", path: "/business-information" },
   ];
 

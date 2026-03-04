@@ -11,6 +11,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import CoreValues from "./pages/CoreValues";
 import CorporateResponsibility from "./pages/CorporateResponsibility";
+import OrganizationalStructure from "./pages/OrganizationalStructure";
 import FinishedContracts from "./pages/FinishedContracts";
 import ValuedClients from "./pages/ValuedClients";
 // import BusinessInformation from "./pages/BusinessInformation";
@@ -32,6 +33,7 @@ function App() {
           {/* About Dropdown Pages */}
           <Route path="/core-values" element={<CoreValues />} />
           <Route path="/corporate-responsibility" element={<CorporateResponsibility />} />
+          <Route path="/organizational-structure" element={<OrganizationalStructure />} />
           {/* <Route path="/business-information" element={<BusinessInformation />} /> */}
 
           {/* Projects Dropdown Page */}

@@ -1,13 +1,6 @@
+import { Link } from "react-router-dom";
+
 function About() {
-  const levelTwo = ["Operations Division", "Commercial Division", "Corporate Services"];
-  const levelThree = [
-    "Engineering & Technical",
-    "Project Management",
-    "Procurement & Supply",
-    "Quality, HSE & Compliance",
-    "Finance & Administration",
-    "Human Resources",
-  ];
 
   return (
     <div className="bg-white text-blue-950">
@@ -23,51 +16,29 @@ function About() {
           <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-blue-100 font-semibold mb-4">
             Organization
           </p>
-          <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.96] max-w-4xl">
-            Organizational Structure
-          </h1>
+          <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.96] max-w-4xl">About DMC</h1>
           <p className="mt-5 text-blue-100 text-lg sm:text-xl max-w-3xl">
-            A clear management and operations structure that supports disciplined execution across all projects.
+            Learn more about our company profile, governance, and how we execute projects with discipline and accountability.
           </p>
         </div>
       </section>
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50/40">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-3">Organizational Chart</h2>
-            <p className="text-blue-900/80 max-w-3xl mx-auto">
-              Leadership alignment from executive level down to core technical and support functions.
+        <div className="max-w-5xl mx-auto">
+          <div className="rounded-2xl border border-blue-200 bg-white p-8 sm:p-10 text-center">
+            <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-blue-700 font-semibold mb-4">
+              Company Overview
             </p>
-          </div>
-
-          <div className="rounded-2xl border border-blue-200 bg-white p-6 sm:p-8">
-            <div className="flex justify-center">
-              <div className="rounded-xl border border-blue-700 bg-blue-700 text-white px-6 py-4 text-center min-w-[240px]">
-                <p className="text-xs tracking-[0.14em] uppercase text-blue-100">Top Management</p>
-                <p className="text-xl font-bold mt-1">Board & President</p>
-              </div>
-            </div>
-
-            <div className="h-8 w-px bg-blue-300 mx-auto" />
-
-            <div className="grid md:grid-cols-3 gap-4 relative">
-              {levelTwo.map((item) => (
-                <div key={item} className="rounded-xl border border-blue-200 bg-blue-50 px-4 py-4 text-center">
-                  <p className="font-semibold text-blue-950">{item}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="h-8 w-px bg-blue-300 mx-auto" />
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {levelThree.map((item) => (
-                <div key={item} className="rounded-xl border border-blue-100 bg-white px-4 py-4 text-center shadow-sm">
-                  <p className="text-blue-900 font-medium">{item}</p>
-                </div>
-              ))}
-            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">Organizational Structure has its own page</h2>
+            <p className="text-blue-900/80 max-w-2xl mx-auto mb-8">
+              The full organizational chart is now separated so it is easier to view and manage as a dedicated page.
+            </p>
+            <Link
+              to="/organizational-structure"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors"
+            >
+              View Organizational Structure
+            </Link>
           </div>
         </div>
       </section>
