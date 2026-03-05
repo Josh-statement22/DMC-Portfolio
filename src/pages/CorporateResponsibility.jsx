@@ -6,7 +6,7 @@ export default function CorporateResponsibility() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1800&q=80"
+          src=""
           alt="Sustainable industrial site with green landscape"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -75,7 +75,7 @@ export default function CorporateResponsibility() {
           <div className="grid lg:grid-cols-12 gap-6 mb-10">
             <article className="lg:col-span-5 rounded-2xl border border-blue-100 overflow-hidden bg-blue-950 text-white">
               <img
-                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80"
+                src=""
                 alt="Safety and health in industrial operations"
                 className="h-64 sm:h-72 w-full object-cover"
               />
@@ -134,7 +134,7 @@ export default function CorporateResponsibility() {
               <div className="lg:col-span-5">
                 <div className="rounded-xl overflow-hidden border border-blue-200">
                   <img
-                    src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?auto=format&fit=crop&w=1400&q=80"
+                    src=""
                     alt="Community volunteer social responsibility programs"
                     className="h-72 w-full object-cover"
                   />
@@ -151,7 +151,7 @@ export default function CorporateResponsibility() {
           <div className="grid lg:grid-cols-12 gap-8 items-stretch">
             <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-blue-200">
               <img
-                src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1400&q=80"
+                src=""
                 alt="Industrial service planning and implementation"
                 className="h-full min-h-[320px] w-full object-cover"
               />

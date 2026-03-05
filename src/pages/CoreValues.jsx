@@ -9,7 +9,7 @@ export default function CoreValues() {
       description:
         'We uphold rigorous standards in every phase of delivery to ensure reliable performance, safety, and long-term value for our clients.',
       image:
-        'https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1400&q=80',
+        '',
     },
     {
       key: 'customer-orientation',
@@ -17,7 +17,7 @@ export default function CoreValues() {
       description:
         'Our planning and execution are shaped by client priorities, making sure solutions are aligned with business goals, timelines, and operational realities.',
       image:
-        'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80',
+        '',
     },
     {
       key: 'flexibility',
@@ -25,7 +25,7 @@ export default function CoreValues() {
       description:
         'We adapt quickly to changing site conditions and project requirements while keeping quality, safety, and delivery outcomes fully controlled.',
       image:
-        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80',
+        '',
     },
     {
       key: 'transparency',
@@ -33,7 +33,7 @@ export default function CoreValues() {
       description:
         'We maintain clear communication, visible reporting, and accountable processes so clients can make informed decisions at every stage.',
       image:
-        'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1400&q=80',
+        '',
     },
     {
       key: 'optimization',
@@ -41,7 +41,7 @@ export default function CoreValues() {
       description:
         'We continuously improve workflows, resources, and technical approaches to maximize efficiency, reduce risk, and strengthen project outcomes.',
       image:
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80',
+        '',
     },
   ];
 
@@ -50,7 +50,7 @@ export default function CoreValues() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1800&q=80"
+          src=""
           alt="Engineer inspecting large-scale infrastructure"
           className="absolute inset-0 h-full w-full object-cover"
         />

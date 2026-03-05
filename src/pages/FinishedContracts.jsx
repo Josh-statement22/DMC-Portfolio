@@ -9,11 +9,11 @@ export default function FinishedContracts() {
       segment: "Infrastructure",
       description:
         "Delivered structural and mechanical scopes for a high-capacity terminal expansion with strict safety and scheduling controls.",
-      cover: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=80",
+      cover: "",
       gallery: [
-        "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1800&q=80",
+        "",
+        "",
+        "",
       ],
     },
     {
@@ -23,11 +23,11 @@ export default function FinishedContracts() {
       segment: "Power",
       description:
         "Implemented retrofit works for critical plant systems to improve reliability, maintainability, and performance.",
-      cover: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80",
+      cover: "",
       gallery: [
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1800&q=80",
+        "",
+        "",
+        "",
       ],
     },
     {
@@ -37,11 +37,11 @@ export default function FinishedContracts() {
       segment: "Infrastructure",
       description:
         "Completed structural reinforcement and steel integration packages for a major bridge modernization contract.",
-      cover: "https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=1600&q=80",
+      cover: "",
       gallery: [
-        "https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1800&q=80",
+        "",
+        "",
+        "",
       ],
     },
     {
@@ -51,11 +51,11 @@ export default function FinishedContracts() {
       segment: "Power",
       description:
         "Executed phased grid upgrade activities with minimal downtime and full compliance with utility standards.",
-      cover: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1600&q=80",
+      cover: "",
       gallery: [
-        "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1800&q=80",
+        "",
+        "",
+        "",
       ],
     },
     {
@@ -65,11 +65,11 @@ export default function FinishedContracts() {
       segment: "Industrial",
       description:
         "Delivered complete piping system installation for process lines, including supports, valves, and commissioning support.",
-      cover: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1600&q=80",
+      cover: "",
       gallery: [
-        "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1590494165264-1ebe3602eb80?auto=format&fit=crop&w=1800&q=80",
+        "",
+        "",
+        "",
       ],
     },
     {
@@ -79,11 +79,11 @@ export default function FinishedContracts() {
       segment: "Industrial",
       description:
         "Supported end-to-end facility buildout from civil interfaces to mechanical completion and turnover readiness.",
-      cover: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1600&q=80",
+      cover: "",
       gallery: [
-        "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1581092919535-7146ff1a590c?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1800&q=80",
+        "",
+        "",
+        "",
       ],
     },
     {
@@ -93,11 +93,11 @@ export default function FinishedContracts() {
       segment: "Commercial",
       description:
         "Delivered utility and systems installation across a mixed-use development with tight interface coordination.",
-      cover: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+      cover: "",
       gallery: [
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80",
+        "",
+        "",
+        "",
       ],
     },
     {
@@ -107,11 +107,11 @@ export default function FinishedContracts() {
       segment: "Infrastructure",
       description:
         "Completed core transport corridor scopes with controlled sequencing and high field productivity standards.",
-      cover: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80",
+      cover: "",
       gallery: [
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=1800&q=80",
-        "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1800&q=80",
+        "",
+        "",
+        "",
       ],
     },
   ];
@@ -151,7 +151,7 @@ export default function FinishedContracts() {
     <div className="bg-white text-blue-950">
       <section className="relative min-h-[65vh] flex items-center px-4 sm:px-6 lg:px-8 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1800&q=80"
+          src=""
           alt="Completed industrial construction project"
           className="absolute inset-0 h-full w-full object-cover"
         />

@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+:root {
+  --font-body: "Work Sans", "Segoe UI", Arial, sans-serif;
+  --font-heading: "Archivo", "Work Sans", "Segoe UI", Arial, sans-serif;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
 }

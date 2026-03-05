@@ -6,7 +6,7 @@ function About() {
     <div className="bg-white text-blue-950">
       <section className="relative min-h-[55vh] flex items-center px-4 sm:px-6 lg:px-8 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80"
+          src=""
           alt="Organization leadership planning session"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -18,27 +18,42 @@ function About() {
           </p>
           <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.96] max-w-4xl">About DMC</h1>
           <p className="mt-5 text-blue-100 text-lg sm:text-xl max-w-3xl">
-            Learn more about our company profile, governance, and how we execute projects with discipline and accountability.
+            D. Michael Co (DMC) Enterprises Corp is a continuously growing company engaged in the supply and sale of
+            construction, power plant, mining, and industrial materials and equipment.
           </p>
         </div>
       </section>
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50/40">
         <div className="max-w-5xl mx-auto">
-          <div className="rounded-2xl border border-blue-200 bg-white p-8 sm:p-10 text-center">
+          <div className="rounded-2xl border border-blue-200 bg-white p-8 sm:p-10">
             <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-blue-700 font-semibold mb-4">
               Company Overview
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">Organizational Structure has its own page</h2>
-            <p className="text-blue-900/80 max-w-2xl mx-auto mb-8">
-              The full organizational chart is now separated so it is easier to view and manage as a dedicated page.
+            <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">Built on quality, service, and long-term trust.</h2>
+            <p className="text-blue-900/80 mb-4">
+              We consistently supply top-grade products with reliable quality and responsive after-sales service.
+              Our company is committed to delivering <strong>&quot;Best Quality, Excellent Service with Great Reputation.&quot;</strong>
             </p>
-            <Link
-              to="/organizational-structure"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors"
-            >
-              View Organizational Structure
-            </Link>
+            <p className="text-blue-900/80 mb-8">
+              This website includes a brief company introduction, product lines, list of business partners, and legal
+              documents for your evaluation. We sincerely look forward to your valued approval for accreditation and
+              to building a strong business relationship with your organization.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                to="/organizational-structure"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors"
+              >
+                View Organizational Structure
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-blue-200 text-blue-900 font-semibold hover:bg-blue-50 transition-colors"
+              >
+                View Product Line
+              </Link>
+            </div>
           </div>
         </div>
       </section>

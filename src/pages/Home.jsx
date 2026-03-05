@@ -20,11 +20,11 @@ export default function Home() {
   const heroSlides = [
     {
       type: 'image',
-      src: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1800&q=80',
+      src: '',
       alt: 'Industrial plant at sunset',
-      eyebrow: 'Industrial and Infrastructure Leadership',
-      heading: 'The Foundation of Industrial Progress.',
-      description: 'We deliver large-scale engineering and construction solutions that keep critical industries moving.',
+      eyebrow: 'D. Michael Co (DMC) Enterprises Corp',
+      heading: 'Your Reliable Supply Partner for Critical Industries.',
+      description: 'A growing company engaged in supplying and selling for construction, power plant, mining, and industrial operations.',
       glanceTitle: 'At a Glance',
       metrics: [
         { value: '500+', label: 'Major Projects Delivered' },
@@ -36,10 +36,10 @@ export default function Home() {
     {
       type: 'video',
       src: 'https://cdn.coverr.co/videos/coverr-workers-walking-through-a-factory-1579/1080p.mp4',
-      poster: 'https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1600&q=80',
-      eyebrow: 'Execution at Scale',
-      heading: 'Complex Operations. One Reliable Partner.',
-      description: 'From planning to field delivery, we align teams, systems, and schedules to keep projects on track.',
+      poster: '',
+      eyebrow: 'Quality and Service Commitment',
+      heading: 'Best Quality. Excellent Service. Great Reputation.',
+      description: 'We insist on delivering top-grade products with reliable quality and responsive after-sales service.',
       glanceTitle: 'Operational Impact',
       metrics: [
         { value: '24/7', label: 'Field Operations Coverage' },
@@ -50,11 +50,11 @@ export default function Home() {
     },
     {
       type: 'image',
-      src: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1800&q=80',
+      src: '',
       alt: 'Engineer inspecting large-scale infrastructure',
-      eyebrow: 'Engineering Precision',
-      heading: 'Built With Certainty, Delivered With Speed.',
-      description: 'Our teams combine deep technical expertise with practical site execution for measurable outcomes.',
+      eyebrow: 'Accreditation Support',
+      heading: 'Complete Company Profile for Your Evaluation.',
+      description: 'Access our product lines, business partner references, and legal documents for accreditation review.',
       glanceTitle: 'Engineering Value',
       metrics: [
         { value: '90+', label: 'Certified Specialists' },
@@ -66,10 +66,10 @@ export default function Home() {
     {
       type: 'video',
       src: 'https://cdn.coverr.co/videos/coverr-engineer-checking-the-gauges-1575/1080p.mp4',
-      poster: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80',
-      eyebrow: 'Long-Term Performance',
-      heading: 'Infrastructure That Performs for Decades.',
-      description: 'We build resilient systems designed for reliability, maintainability, and sustained business growth.',
+      poster: '',
+      eyebrow: 'Long-Term Partnership',
+      heading: 'Built to Grow with Your Operations.',
+      description: 'We sincerely look forward to establishing a strong and lasting business relationship with your organization.',
       glanceTitle: 'Lifecycle Confidence',
       metrics: [
         { value: '25+', label: 'Years Asset Lifecycle Support' },
@@ -84,62 +84,75 @@ export default function Home() {
   const marketSectors = [
     {
       key: 'building',
-      title: 'Building',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
-      p1: 'We deliver building programs with disciplined planning, strong site controls, and reliable schedule performance. Our teams coordinate design, procurement, and construction to reduce risk and maintain quality from groundbreaking to turnover.',
-      p2: 'From commercial complexes to mission-critical facilities, we focus on constructability and long-term value. The result is safer execution, predictable delivery, and assets built to perform over time.',
+      title: 'Construction',
+      image: '',
+      p1: 'We supply construction materials and equipment for civil, commercial, and industrial projects with dependable quality and schedule support.',
+      p2: 'From groundwork to turnover requirements, our team ensures practical coordination, responsive service, and reliable product availability for continuous site progress.',
     },
     {
       key: 'industrial',
-      title: 'Industrial',
-      image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1600&q=80',
-      p1: 'Our industrial expertise supports manufacturing and process-heavy environments where precision and uptime are essential. We align technical scopes with practical field execution to keep production realities front and center.',
-      p2: 'By combining engineering rigor with phased implementation strategies, we help clients modernize facilities while minimizing disruptions and preserving operational continuity.',
+      title: 'Industrial Materials',
+      image: '',
+      p1: 'We provide industrial-grade materials and equipment suited for process plants, fabrication facilities, and production-critical operations.',
+      p2: 'Our supply approach prioritizes durability, compliance, and after-sales support so your teams can maintain uptime and long-term operational performance.',
     },
     {
       key: 'infrastructure',
-      title: 'Infrastructure',
-      image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80',
-      p1: 'We build infrastructure systems that enable growth and resilience across transport, utility, and civil networks. Our delivery model emphasizes stakeholder alignment, safety discipline, and long-term durability.',
-      p2: 'With strong project controls and sequencing expertise, we execute complex, multi-party programs with clarity and accountability at every milestone.',
+      title: 'Power-plant',
+      image: '',
+      p1: 'We support power-plant projects through reliable supply of essential materials and equipment for generation, maintenance, and plant upgrades.',
+      p2: 'With quality-focused sourcing and responsive delivery coordination, we help plant teams reduce delays and sustain safe, stable operations.',
     },
     {
       key: 'mining',
       title: 'Mining',
-      image: 'https://images.unsplash.com/photo-1610024062303-e355e94c7a8f?auto=format&fit=crop&w=1600&q=80',
-      p1: 'Mining projects require robust logistics, dependable equipment support, and strict safety standards. We deliver field-ready solutions tailored for high-intensity and remote operating conditions.',
-      p2: 'Our teams manage critical scopes with schedule discipline and risk-first planning, helping clients improve throughput, reduce downtime, and protect long-term asset performance.',
+      image: '',
+      p1: 'Mining operations depend on durable equipment and dependable material supply under high-demand field conditions, and this is where DMC delivers.',
+      p2: 'We provide mining-ready products with practical logistics support and committed after-sales service to help reduce downtime and protect productivity.',
     },
     {
       key: 'power',
-      title: 'Power',
-      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80',
-      p1: 'We execute power programs with a focus on reliability, commissioning readiness, and compliance. From generation assets to supporting systems, we ensure technical and operational alignment from day one.',
-      p2: 'Our integrated approach improves coordination across disciplines, helping owners reduce delays and deliver stable, efficient energy infrastructure.',
+      title: 'Automotive',
+      image: '',
+      p1: 'Our automotive line includes dependable parts, maintenance products, and workshop essentials for fleet and transport-related operations.',
+      p2: 'We focus on consistent product quality and fast support so clients can keep vehicles and equipment in service-ready condition.',
+    },
+    {
+      key: 'ppe',
+      title: 'PPE',
+      image: '',
+      p1: 'We supply personal protective equipment that supports site safety standards across construction, industrial, power, and mining environments.',
+      p2: 'From daily-use safety gear to specialized protective items, we deliver reliable PPE quality backed by responsive customer support.',
     },
   ];
   const productCategories = [
     {
       name: 'Heavy Machinery',
-      image: 'https://images.unsplash.com/photo-1580901368919-7738efb0f87e?auto=format&fit=crop&w=1200&q=80',
+      image: '',
       useCase: 'Earthworks and heavy lifting',
       leadTime: '5-10 days',
     },
     {
       name: 'Structural Steel',
-      image: 'https://images.unsplash.com/photo-1590494165264-1ebe3602eb80?auto=format&fit=crop&w=1200&q=80',
+      image: '',
       useCase: 'Bridges and industrial frames',
       leadTime: '3-7 days',
     },
     {
       name: 'Industrial Valves',
-      image: 'https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1200&q=80',
+      image: '',
       useCase: 'Flow control and safety systems',
       leadTime: '2-5 days',
     },
     {
       name: 'Process Piping',
-      image: 'https://images.unsplash.com/photo-1624397640148-949b1732bb0a?auto=format&fit=crop&w=1200&q=80',
+      image: '',
+      useCase: 'Plant and utility lines',
+      leadTime: '4-8 days',
+    },
+     {
+      name: 'Technological Equipment',
+      image: '',
       useCase: 'Plant and utility lines',
       leadTime: '4-8 days',
     },
@@ -148,25 +161,25 @@ export default function Home() {
     {
       title: 'Bulk Logistics & Delivery',
       text: 'Coordinated transport planning for large-volume and time-critical materials.',
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
+      image: '',
       placeholder: 'Integrated Logistics',
     },
     {
       title: 'Technical Consultation',
       text: 'Application-focused guidance to ensure fit, compliance, and performance.',
-      image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=80',
+      image: '',
       placeholder: 'Engineering Advisory',
     },
     {
       title: 'Equipment Maintenance',
       text: 'Preventive and corrective support to maximize uptime and extend asset life.',
-      image: 'https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1200&q=80',
+      image: '',
       placeholder: 'Lifecycle Support',
     },
     {
       title: 'Custom Fabrication',
       text: 'Tailored fabrication solutions aligned to your project specifications.',
-      image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1200&q=80',
+      image: '',
       placeholder: 'Built-to-Spec Solutions',
     },
   ];
@@ -175,60 +188,60 @@ export default function Home() {
       title: 'Visayas Bridge Expansion',
       supply: 'Supplied 5,000 tons of structural steel for a major transport corridor.',
       outcome: 'Delivered 5 days ahead of schedule.',
-      image: 'https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=1400&q=80',
+      image: '',
     },
     {
       title: 'Luzon Energy Upgrade',
       supply: 'Provided industrial valves and process lines for a utility modernization project.',
       outcome: 'Reduced commissioning delays by 18%.',
-      image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=80',
+      image: '',
     },
     {
       title: 'Mindanao Mining Complex',
       supply: 'Delivered heavy equipment and on-site technical support for phase-one expansion.',
       outcome: 'Achieved zero critical delivery incidents.',
-      image: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1400&q=80',
+      image: '',
     },
   ];
   const partners = [
     {
       name: 'San Miguel',
-      image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=900&q=80',
+      image: '',
     },
     {
       name: 'Ayala',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80',
+      image: '',
     },
     {
       name: 'Megawide',
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80',
+      image: '',
     },
     {
       name: 'Aboitiz',
-      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80',
+      image: '',
     },
     {
       name: 'DMCI',
-      image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80',
+      image: '',
     },
     {
       name: 'Meralco',
-      image: 'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=900&q=80',
+      image: '',
     },
     {
       name: 'JGC Philippines',
-      image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=900&q=80',
+      image: '',
     },
     {
       name: 'EEI',
-      image: 'https://images.unsplash.com/photo-1610024062303-e355e94c7a8f?auto=format&fit=crop&w=900&q=80',
+      image: '',
     },
   ];
   const trustHighlights = [
-    'ISO-Aligned Quality Systems',
-    '24/7 Technical Response',
-    'Nationwide Project Support',
-    'Safety-First Execution Culture',
+    'Top-Grade Products',
+    'Reliable Quality',
+    'After-Sales Service',
+    'Accreditation-Ready Documents',
   ];
   const differentiators = [
     {
@@ -329,48 +342,24 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-900/65 to-blue-950/20" />
 
         <div className="relative z-10 max-w-7xl mx-auto w-full py-28 sm:py-32">
-          <div className="grid lg:grid-cols-12 gap-10 items-end">
-            <div className="lg:col-span-7 space-y-6 text-left">
+          <div className="max-w-5xl mx-auto space-y-7 text-center">
               <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-slate-200 font-semibold">
                 {currentSlide.eyebrow}
               </p>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.96] max-w-4xl">
+              <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.94] max-w-5xl mx-auto">
                 {currentSlide.heading}
               </h1>
-              <p className="text-lg sm:text-xl text-slate-200 max-w-2xl leading-relaxed">
+              <p className="text-xl sm:text-2xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
                 {currentSlide.description}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                 <button className="px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 rounded-md font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-lg shadow-slate-950/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">
                   Explore Solutions <ArrowRight size={20} />
                 </button>
-                <button className="px-8 py-4 bg-transparent hover:bg-white/10 rounded-md font-semibold text-lg transition-all duration-300 border border-white/60 text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">
-                  Request a Quote
-                </button>
               </div>
-            </div>
-
-            <div className="lg:col-span-5">
-              <div className="w-full max-w-md ml-auto rounded-xl border border-white/20 bg-blue-950/35 backdrop-blur-md p-6 sm:p-7 shadow-2xl shadow-blue-950/50">
-                <p className="text-xs uppercase tracking-[0.2em] text-blue-100/80 mb-5">
-                  {currentSlide.glanceTitle}
-                </p>
-                <div className="space-y-5">
-                  {currentSlide.metrics.map((item) => (
-                    <div key={item.label} className="pb-4 border-b border-white/15 last:border-b-0 last:pb-0">
-                      <p className="text-3xl sm:text-4xl font-bold text-white">{item.value}</p>
-                      <p className="text-blue-100 mt-1">{item.label}</p>
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-6 text-sm text-blue-100/85">
-                  {currentSlide.panelNote}
-                </p>
-              </div>
-            </div>
           </div>
 
-          <div className="mt-8 flex items-center gap-3">
+          <div className="mt-8 flex items-center justify-center gap-3">
             {heroSlides.map((slide, index) => (
               <button
                 key={`dot-${index}`}
@@ -390,7 +379,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-5 items-center">
             <div className="lg:col-span-4">
               <p className="text-xs uppercase tracking-[0.18em] text-blue-700 font-semibold mb-2">Trusted by Industry Leaders</p>
-              <p className="text-blue-900/80 text-sm">Built for enterprise clients that require reliability, compliance, and speed.</p>
+              <p className="text-blue-900/80 text-sm">Built for clients who require quality supply, reliable service, and long-term support.</p>
             </div>
             <div className="lg:col-span-8 flex flex-wrap gap-2.5">
               {trustHighlights.map((item) => (
@@ -459,7 +448,7 @@ export default function Home() {
       <section className={`${ui.section} bg-white`}>
         <div className={ui.container}>
           <div className="mb-10 lg:mb-12">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl pl-4 border-l-4 border-blue-500">
               <p className="text-base sm:text-lg uppercase tracking-[0.2em] text-blue-700 mb-4 font-semibold">Our Market</p>
               <h2 className={ui.headingSection}>High-demand categories for industrial operations.</h2>
               <div className="mt-4 h-1 w-28 rounded-full bg-blue-700" />
@@ -742,10 +731,10 @@ export default function Home() {
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.24em] text-blue-100 font-semibold mb-4">Ready to Execute</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
-            Plan your next project with a partner built for critical operations.
+            Begin your accreditation and sourcing process with DMC.
           </h2>
           <p className="text-blue-100 text-lg max-w-3xl mx-auto leading-relaxed mb-8">
-            Tell us your timeline, scope, and project requirements. Our team will respond with a practical execution approach.
+            Share your requirements and evaluation process. Our team will provide the needed profile, references, and legal documents for review.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

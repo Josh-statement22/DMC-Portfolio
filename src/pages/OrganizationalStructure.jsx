@@ -12,17 +12,17 @@ function OrganizationalStructure() {
     {
       key: "sec-registration",
       title: "SEC Registration",
-      image: "https://placehold.co/1200x800/e2e8f0/0f172a?text=Add+Certification+Image",
+      image: "",
     },
     {
       key: "bir-certificate",
       title: "BIR Certificate",
-      image: "https://placehold.co/1200x800/e2e8f0/0f172a?text=Add+Certification+Image",
+      image: "",
     },
     {
       key: "business-permit",
       title: "Business Permit",
-      image: "https://placehold.co/1200x800/e2e8f0/0f172a?text=Add+Certification+Image",
+      image: "",
     },
   ];
 
@@ -30,7 +30,7 @@ function OrganizationalStructure() {
     <div className="bg-white text-blue-950">
       <section className="relative min-h-[55vh] flex items-center px-4 sm:px-6 lg:px-8 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80"
+          src=""
           alt="Organization leadership planning session"
           className="absolute inset-0 h-full w-full object-cover"
         />
