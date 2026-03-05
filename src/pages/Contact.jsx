@@ -54,7 +54,7 @@ function Contact() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50/40">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8">
           <div className="lg:col-span-7 rounded-2xl border border-blue-200 bg-white p-6 sm:p-8">
-            <p className="text-xs uppercase tracking-[0.2em] text-blue-700 font-semibold mb-3">Inquiry Form</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-black font-semibold mb-3">Inquiry Form</p>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">Tell us what you need</h2>
             <form className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">
@@ -173,9 +173,9 @@ function Contact() {
                 <div className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-blue-100 text-blue-800 mb-3">
                   {item.icon}
                 </div>
-                <p className="text-sm uppercase tracking-[0.16em] text-blue-700 font-semibold mb-1">{item.title}</p>
+                <p className="text-sm uppercase tracking-[0.16em] text-black font-semibold mb-1">{item.title}</p>
                 <p className="text-lg font-bold text-blue-950">{item.detail}</p>
-                <p className="text-blue-900/75 mt-1">{item.note}</p>
+                <p className="text-black/80 mt-1">{item.note}</p>
               </article>
             ))}
           </div>
@@ -186,3 +186,4 @@ function Contact() {
 }
 
 export default Contact;
+

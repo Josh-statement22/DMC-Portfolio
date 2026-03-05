@@ -27,15 +27,15 @@ function About() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50/40">
         <div className="max-w-5xl mx-auto">
           <div className="rounded-2xl border border-blue-200 bg-white p-8 sm:p-10">
-            <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-blue-700 font-semibold mb-4">
+            <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-black font-semibold mb-4">
               Company Overview
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">Built on quality, service, and long-term trust.</h2>
-            <p className="text-blue-900/80 mb-4">
+            <p className="text-black/85 mb-4">
               We consistently supply top-grade products with reliable quality and responsive after-sales service.
               Our company is committed to delivering <strong>&quot;Best Quality, Excellent Service with Great Reputation.&quot;</strong>
             </p>
-            <p className="text-blue-900/80 mb-8">
+            <p className="text-black/85 mb-8">
               This website includes a brief company introduction, product lines, list of business partners, and legal
               documents for your evaluation. We sincerely look forward to your valued approval for accreditation and
               to building a strong business relationship with your organization.
@@ -62,3 +62,4 @@ function About() {
 }
 
 export default About;
+

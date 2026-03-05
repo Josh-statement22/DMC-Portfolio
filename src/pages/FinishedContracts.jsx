@@ -187,7 +187,7 @@ export default function FinishedContracts() {
                 {filter}
               </button>
             ))}
-            <p className="text-sm text-blue-800/80 ml-auto">{filteredProjects.length} projects shown</p>
+            <p className="text-sm text-black/85 ml-auto">{filteredProjects.length} projects shown</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -212,7 +212,7 @@ export default function FinishedContracts() {
                 <div className="p-4 sm:p-5">
                   <p className="text-lg font-bold text-blue-950">{item.client}</p>
                   <p className="text-blue-800 font-medium">{item.project}</p>
-                  <p className="text-sm text-blue-900/80 mt-2 line-clamp-2">{item.description}</p>
+                  <p className="text-sm text-black/85 mt-2 line-clamp-2">{item.description}</p>
                 </div>
               </button>
             ))}
@@ -273,10 +273,10 @@ export default function FinishedContracts() {
               </div>
 
               <div className="lg:col-span-4 p-6 sm:p-7">
-                <p className="text-xs uppercase tracking-[0.14em] text-blue-700 font-semibold mb-3">{selectedProject.segment}</p>
+                <p className="text-xs uppercase tracking-[0.14em] text-black font-semibold mb-3">{selectedProject.segment}</p>
                 <h2 className="text-2xl font-bold text-blue-950 mb-2">{selectedProject.client}</h2>
                 <p className="text-blue-800 font-semibold mb-4">{selectedProject.project}</p>
-                <p className="text-blue-900/80 leading-relaxed mb-6">{selectedProject.description}</p>
+                <p className="text-black/85 leading-relaxed mb-6">{selectedProject.description}</p>
                 <div className="grid grid-cols-3 gap-2">
                   {selectedProject.gallery.map((image, index) => (
                     <button
@@ -299,3 +299,4 @@ export default function FinishedContracts() {
     </div>
   );
 }
+

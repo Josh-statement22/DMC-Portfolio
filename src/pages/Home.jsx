@@ -6,8 +6,8 @@ export default function Home() {
   const ui = {
     section: 'py-24 px-4 sm:px-6 lg:px-8',
     container: 'max-w-7xl mx-auto',
-    eyebrow: 'text-xs uppercase tracking-[0.24em] text-blue-700 mb-4',
-    eyebrowSection: 'text-sm sm:text-base uppercase tracking-[0.2em] text-blue-700 mb-4 font-semibold',
+    eyebrow: 'text-xs uppercase tracking-[0.24em] text-black mb-4',
+    eyebrowSection: 'text-sm sm:text-base uppercase tracking-[0.2em] text-black mb-4 font-semibold',
     heading: 'text-5xl sm:text-6xl font-bold text-blue-950 tracking-tight',
     headingSection: 'text-3xl sm:text-4xl font-bold text-blue-950 tracking-tight',
     primaryBtn:
@@ -376,8 +376,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto rounded-2xl border border-blue-200 bg-white shadow-lg p-5 sm:p-6">
           <div className="grid lg:grid-cols-12 gap-5 items-center">
             <div className="lg:col-span-4">
-              <p className="text-xs uppercase tracking-[0.18em] text-blue-700 font-semibold mb-2">Trusted by Industry Leaders</p>
-              <p className="text-blue-900/80 text-sm">Built for clients who require quality supply, reliable service, and long-term support.</p>
+              <p className="text-xs uppercase tracking-[0.18em] text-black font-semibold mb-2">Trusted by Industry Leaders</p>
+              <p className="text-black/85 text-sm">Built for clients who require quality supply, reliable service, and long-term support.</p>
             </div>
             <div className="lg:col-span-8 flex flex-wrap gap-2.5">
               {trustHighlights.map((item) => (
@@ -408,8 +408,8 @@ export default function Home() {
                 {differentiators.map((item) => (
                   <div key={item.title}>
                     <p className="text-3xl sm:text-4xl font-extrabold text-blue-900">{item.value}</p>
-                    <p className="text-sm uppercase tracking-[0.16em] text-blue-700 font-semibold mt-1">{item.title}</p>
-                    <p className="text-blue-900/80 leading-relaxed mt-1">{item.detail}</p>
+                    <p className="text-sm uppercase tracking-[0.16em] text-black font-semibold mt-1">{item.title}</p>
+                    <p className="text-black/85 leading-relaxed mt-1">{item.detail}</p>
                   </div>
                 ))}
               </div>
@@ -458,9 +458,9 @@ export default function Home() {
                 <img src={project.image} alt={project.title} className="h-52 w-full object-cover" />
                 <div className="p-6">
                   <h3 className="text-2xl font-semibold text-blue-950 mb-3">{project.title}</h3>
-                  <p className="text-xs uppercase tracking-[0.16em] text-blue-700 font-semibold mb-1">Challenge</p>
-                  <p className="text-blue-800/85 mb-3">{project.supply}</p>
-                  <p className="text-xs uppercase tracking-[0.16em] text-blue-700 font-semibold mb-1">Result</p>
+                  <p className="text-xs uppercase tracking-[0.16em] text-black font-semibold mb-1">Challenge</p>
+                  <p className="text-black/85 mb-3">{project.supply}</p>
+                  <p className="text-xs uppercase tracking-[0.16em] text-black font-semibold mb-1">Result</p>
                   <p className="inline-flex items-center gap-2 text-emerald-700 font-semibold">
                     <CheckCircle2 size={16} />
                     {project.outcome}
@@ -481,7 +481,7 @@ export default function Home() {
               <p className={ui.eyebrowSection}>Organizational Strength</p>
               <h2 className={ui.headingSection}>Leadership and governance built for accountability.</h2>
               <div className="mt-4 h-1 w-28 rounded-full bg-blue-700" />
-              <p className="mt-5 text-blue-900/80 leading-relaxed">
+              <p className="mt-5 text-black/85 leading-relaxed">
                 View our full organizational structure and legal credentials to understand how DMC maintains
                 disciplined operations, compliance, and delivery control.
               </p>
@@ -496,7 +496,7 @@ export default function Home() {
             </article>
 
             <article className="lg:col-span-5 rounded-2xl border border-blue-200 bg-blue-50/40 p-6 sm:p-8">
-              <p className="text-xs uppercase tracking-[0.18em] text-blue-700 font-semibold mb-4">Legal Credentials</p>
+              <p className="text-xs uppercase tracking-[0.18em] text-black font-semibold mb-4">Legal Credentials</p>
               <div className="space-y-3">
                 {legalCredentialSlots.map((item) => (
                   <div key={item} className="rounded-xl border border-blue-200 bg-white px-4 py-3 text-blue-950 font-medium">
@@ -518,7 +518,7 @@ export default function Home() {
               <p className={ui.eyebrowSection}>Corporate Responsibility</p>
               <h2 className={ui.headingSection}>Safe operations, responsible growth, long-term impact.</h2>
               <div className="mt-4 h-1 w-28 rounded-full bg-blue-700" />
-              <p className="mt-5 text-blue-900/80 leading-relaxed">
+              <p className="mt-5 text-black/85 leading-relaxed">
                 Our responsibility framework puts safety, health, and environmental standards at the center of every
                 project while promoting meaningful community participation.
               </p>
@@ -582,8 +582,8 @@ export default function Home() {
 
             <div className="rounded-xl border border-blue-200 bg-white p-6 sm:p-8">
               <h3 className="text-2xl sm:text-3xl font-bold text-blue-950 mb-4">{selectedSector.title}</h3>
-              <p className="text-blue-800/85 leading-relaxed mb-4">{selectedSector.p1}</p>
-              <p className="text-blue-800/85 leading-relaxed mb-8">{selectedSector.p2}</p>
+              <p className="text-black/85 leading-relaxed mb-4">{selectedSector.p1}</p>
+              <p className="text-black/85 leading-relaxed mb-8">{selectedSector.p2}</p>
               <Link to="/finished-contracts" className={ui.primaryBtn}>
                 View Projects <ArrowRight size={18} />
               </Link>
@@ -781,3 +781,4 @@ export default function Home() {
     </div>
   );
 }
+

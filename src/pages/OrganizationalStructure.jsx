@@ -53,7 +53,7 @@ function OrganizationalStructure() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-3">Organizational Chart</h2>
-            <p className="text-blue-900/80 max-w-3xl mx-auto">
+            <p className="text-black/85 max-w-3xl mx-auto">
               Leadership alignment from executive level down to core technical and support functions.
             </p>
           </div>
@@ -92,11 +92,11 @@ function OrganizationalStructure() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-blue-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
-            <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-blue-700 font-semibold mb-4">
+            <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-black font-semibold mb-4">
               Compliance
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-3">Legal Certifications</h2>
-            <p className="text-blue-900/80 max-w-3xl mx-auto">
+            <p className="text-black/85 max-w-3xl mx-auto">
               Ready section for your permits and legal certifications. Replace the placeholder images with your actual documents.
             </p>
           </div>
@@ -109,7 +109,7 @@ function OrganizationalStructure() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-semibold text-blue-950">{item.title}</h3>
-                  <p className="text-sm text-blue-900/70 mt-2">Upload your certification image for this slot.</p>
+                  <p className="text-sm text-black/75 mt-2">Upload your certification image for this slot.</p>
                 </div>
               </article>
             ))}
@@ -121,3 +121,4 @@ function OrganizationalStructure() {
 }
 
 export default OrganizationalStructure;
+

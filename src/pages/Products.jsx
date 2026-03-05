@@ -61,7 +61,7 @@ function Products() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8 pl-4 border-l-4 border-blue-500">
-            <p className="text-xs uppercase tracking-[0.2em] text-blue-700 font-semibold mb-3">Item Categories</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-black font-semibold mb-3">Item Categories</p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Browse Product Subcategories</h2>
           </div>
 
@@ -73,7 +73,7 @@ function Products() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-2xl font-semibold text-blue-950 mb-2">{item.name}</h3>
-                  <p className="text-blue-900/80 mb-4">{item.text}</p>
+                  <p className="text-black/85 mb-4">{item.text}</p>
                   <Link to={item.path} className="inline-flex items-center gap-2 text-blue-800 font-semibold hover:text-blue-900">
                     Open Category <ArrowRight size={16} />
                   </Link>
@@ -88,3 +88,4 @@ function Products() {
 }
 
 export default Products;
+

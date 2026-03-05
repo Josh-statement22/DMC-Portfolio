@@ -102,7 +102,7 @@ function Services() {
                       {service.icon}
                       <p className="font-semibold">{service.title}</p>
                     </div>
-                    <p className={`${isActive ? "text-blue-100" : "text-blue-900/75"} text-sm`}>{service.short}</p>
+                    <p className={`${isActive ? "text-blue-100" : "text-black/80"} text-sm`}>{service.short}</p>
                   </button>
                 );
               })}
@@ -114,7 +114,7 @@ function Services() {
                 Service Overview
               </div>
               <h3 className="text-3xl sm:text-4xl font-bold mb-4">{selectedService.title}</h3>
-              <p className="text-blue-900/80 text-lg leading-relaxed mb-8">{selectedService.full}</p>
+              <p className="text-black/85 text-lg leading-relaxed mb-8">{selectedService.full}</p>
               <button className="px-6 py-3 bg-blue-800 text-white hover:bg-blue-900 rounded-md font-semibold inline-flex items-center gap-2 transition-all duration-300">
                 Request Service Consultation <ArrowRight size={18} />
               </button>
@@ -134,7 +134,7 @@ function Services() {
               <article key={item.step} className="rounded-xl border border-blue-200 bg-white p-5">
                 <p className="text-sm font-bold text-blue-700 mb-2">{item.step}</p>
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-blue-900/80 leading-relaxed">{item.text}</p>
+                <p className="text-black/85 leading-relaxed">{item.text}</p>
               </article>
             ))}
           </div>
@@ -160,3 +160,4 @@ function Services() {
 }
 
 export default Services;
+

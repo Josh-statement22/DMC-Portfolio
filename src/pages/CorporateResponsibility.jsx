@@ -60,13 +60,13 @@ export default function CorporateResponsibility() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 max-w-4xl">
-            <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-blue-700 font-semibold mb-4">
+            <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-black font-semibold mb-4">
               Responsibility Framework
             </p>
             <h2 className="text-4xl sm:text-5xl font-bold text-blue-950 tracking-tight leading-tight mb-5">
               One Integrated Policy for People and Planet
             </h2>
-            <p className="text-lg text-blue-900/80 leading-relaxed">
+            <p className="text-lg text-black/85 leading-relaxed">
               Our approach is structured as one connected system: policy standards for safety, health, and the
               environment, followed by direct social participation through voluntary staff action.
             </p>
@@ -93,17 +93,17 @@ export default function CorporateResponsibility() {
               <article className="rounded-2xl border border-blue-200 bg-blue-50 p-6">
                 <ShieldCheck size={20} className="text-blue-700 mb-3" />
                 <h4 className="text-2xl font-bold text-blue-950 mb-2">Safety</h4>
-                <p className="text-blue-900/80">Strict standards for safe operations, planning, and execution.</p>
+                <p className="text-black/85">Strict standards for safe operations, planning, and execution.</p>
               </article>
               <article className="rounded-2xl border border-blue-200 bg-blue-50 p-6">
                 <HeartHandshake size={20} className="text-blue-700 mb-3" />
                 <h4 className="text-2xl font-bold text-blue-950 mb-2">Health</h4>
-                <p className="text-blue-900/80">Protection of employee and community well-being in all activities.</p>
+                <p className="text-black/85">Protection of employee and community well-being in all activities.</p>
               </article>
               <article className="rounded-2xl border border-blue-200 bg-blue-50 p-6 sm:col-span-2">
                 <Leaf size={20} className="text-blue-700 mb-3" />
                 <h4 className="text-2xl font-bold text-blue-950 mb-2">Environment</h4>
-                <p className="text-blue-900/80">
+                <p className="text-black/85">
                   Operational discipline that minimizes impact and preserves environmental resources.
                 </p>
               </article>
@@ -113,9 +113,9 @@ export default function CorporateResponsibility() {
           <article className="rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-6 sm:p-8 lg:p-10">
             <div className="grid lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7">
-                <p className="text-xs uppercase tracking-[0.2em] text-blue-700 font-semibold mb-3">Social Responsibility</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-black font-semibold mb-3">Social Responsibility</p>
                 <h3 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">Voluntary Action That Creates Community Impact</h3>
-                <p className="text-blue-900/80 text-lg leading-relaxed mb-6">
+                <p className="text-black/85 text-lg leading-relaxed mb-6">
                   Responsibility for social issues is an increasingly important subject. Our staff is involved on a
                   voluntary basis in various social projects.
                 </p>
@@ -157,22 +157,22 @@ export default function CorporateResponsibility() {
               />
             </div>
             <article className="lg:col-span-7 rounded-2xl border border-blue-200 bg-white p-6 sm:p-8 lg:p-10">
-              <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-blue-700 font-semibold mb-4">
+              <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-black font-semibold mb-4">
                 Our Service
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 tracking-tight leading-tight mb-5">
                 Outstanding quality and greatest care.
               </h2>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-blue-900/85">
+                <li className="flex items-start gap-3 text-black/85">
                   <span className="mt-1 h-2.5 w-2.5 rounded-full bg-blue-700 shrink-0" />
                   <span className="text-lg leading-relaxed">Materials specifically selected for a long lifetime.</span>
                 </li>
-                <li className="flex items-start gap-3 text-blue-900/85">
+                <li className="flex items-start gap-3 text-black/85">
                   <span className="mt-1 h-2.5 w-2.5 rounded-full bg-blue-700 shrink-0" />
                   <span className="text-lg leading-relaxed">Quick and flexible solutions for any market requirement.</span>
                 </li>
-                <li className="flex items-start gap-3 text-blue-900/85">
+                <li className="flex items-start gap-3 text-black/85">
                   <span className="mt-1 h-2.5 w-2.5 rounded-full bg-blue-700 shrink-0" />
                   <span className="text-lg leading-relaxed">Local implementation.</span>
                 </li>
@@ -201,3 +201,4 @@ export default function CorporateResponsibility() {
     </div>
   );
 }
+

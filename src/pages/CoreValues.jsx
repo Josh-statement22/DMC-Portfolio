@@ -102,13 +102,13 @@ export default function CoreValues() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mb-14">
-            <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-blue-700 font-semibold mb-4">
+            <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-black font-semibold mb-4">
               Values in Action
             </p>
             <h2 className="text-4xl sm:text-5xl font-bold text-blue-950 tracking-tight leading-tight mb-6">
               Our Core Values in Every Engagement
             </h2>
-            <p className="text-lg text-blue-900/80 leading-relaxed">
+            <p className="text-lg text-black/85 leading-relaxed">
               From the analysis of customer needs, through to the development of solutions, products, training and
               service, these values define how DMC delivers measurable and trusted results.
             </p>
@@ -127,9 +127,9 @@ export default function CoreValues() {
                 </div>
                 <div className={`lg:col-span-7 flex ${index % 2 !== 0 ? 'lg:order-1' : ''}`}>
                   <div className="rounded-xl border border-blue-200 bg-white p-6 sm:p-8 w-full flex flex-col justify-center">
-                    <p className="text-xs uppercase tracking-[0.2em] text-blue-700 font-semibold mb-3">Core Value</p>
+                    <p className="text-xs uppercase tracking-[0.2em] text-black font-semibold mb-3">Core Value</p>
                     <h3 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">{item.title}</h3>
-                    <p className="text-blue-900/80 text-lg leading-relaxed">{item.description}</p>
+                    <p className="text-black/85 text-lg leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               </article>
@@ -167,3 +167,4 @@ export default function CoreValues() {
     </div>
   );
 }
+

@@ -39,25 +39,25 @@ export default function ItemCatalogTemplate({
       <section className="px-4 sm:px-6 lg:px-8 py-12 bg-blue-50/40 border-y border-blue-100">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-6">
           <div className="lg:col-span-7 rounded-2xl border border-blue-200 bg-white p-6 sm:p-7">
-            <p className="text-xs uppercase tracking-[0.18em] text-blue-700 font-semibold mb-3">Featured Item</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-black font-semibold mb-3">Featured Item</p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">{featuredItem.name}</h2>
-            <p className="text-blue-900/80 leading-relaxed mb-5">{featuredItem.description}</p>
+            <p className="text-black/85 leading-relaxed mb-5">{featuredItem.description}</p>
 
             <div className="grid sm:grid-cols-2 gap-3 mb-6">
               <div className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-3">
-                <p className="text-xs uppercase tracking-[0.14em] text-blue-700 font-semibold mb-1">SKU</p>
+                <p className="text-xs uppercase tracking-[0.14em] text-black font-semibold mb-1">SKU</p>
                 <p className="font-semibold text-blue-950">{featuredItem.sku}</p>
               </div>
               <div className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-3">
-                <p className="text-xs uppercase tracking-[0.14em] text-blue-700 font-semibold mb-1">Application</p>
+                <p className="text-xs uppercase tracking-[0.14em] text-black font-semibold mb-1">Application</p>
                 <p className="font-semibold text-blue-950">{featuredItem.application}</p>
               </div>
               <div className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-3">
-                <p className="text-xs uppercase tracking-[0.14em] text-blue-700 font-semibold mb-1">Availability</p>
+                <p className="text-xs uppercase tracking-[0.14em] text-black font-semibold mb-1">Availability</p>
                 <p className="font-semibold text-blue-950">{featuredItem.stock}</p>
               </div>
               <div className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-3">
-                <p className="text-xs uppercase tracking-[0.14em] text-blue-700 font-semibold mb-1">Lead Time</p>
+                <p className="text-xs uppercase tracking-[0.14em] text-black font-semibold mb-1">Lead Time</p>
                 <p className="font-semibold text-blue-950">{featuredItem.leadTime}</p>
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function ItemCatalogTemplate({
           </div>
 
           <div className="lg:col-span-5 rounded-2xl border border-blue-200 bg-white p-6 sm:p-7">
-            <p className="text-xs uppercase tracking-[0.18em] text-blue-700 font-semibold mb-4">Item Inquiry</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-black font-semibold mb-4">Item Inquiry</p>
             <div className="grid grid-cols-2 gap-3 mb-3">
               {["Category", "Application", "Quantity", "Timeline"].map((label) => (
                 <div key={label} className="rounded-md border border-blue-200 bg-slate-50 px-3 py-3 text-sm text-slate-500">
@@ -83,7 +83,7 @@ export default function ItemCatalogTemplate({
             <button type="button" className="w-full px-5 py-3 rounded-md bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors">
               Request Availability
             </button>
-            <p className="mt-4 text-sm text-blue-900/80 leading-relaxed">
+            <p className="mt-4 text-sm text-black/85 leading-relaxed">
               Share your required item details so we can provide lead time, availability, and quotation support.
             </p>
           </div>
@@ -93,7 +93,7 @@ export default function ItemCatalogTemplate({
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8">
-            <p className="text-xs uppercase tracking-[0.2em] text-blue-700 font-semibold mb-3">Catalog</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-black font-semibold mb-3">Catalog</p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">{catalogTitle}</h2>
           </div>
 
@@ -129,9 +129,9 @@ export default function ItemCatalogTemplate({
                 <div className="mb-4 overflow-hidden rounded-lg border border-blue-100 bg-blue-50">
                   <img src={item.image} alt={item.name} className="h-44 w-full object-cover" />
                 </div>
-                <p className="text-xs uppercase tracking-[0.14em] text-blue-700 font-semibold mb-2">{item.sku}</p>
+                <p className="text-xs uppercase tracking-[0.14em] text-black font-semibold mb-2">{item.sku}</p>
                 <h3 className="text-xl font-semibold text-blue-950 mb-2">{item.name}</h3>
-                <p className="text-sm text-blue-900/80 mb-3">{item.description}</p>
+                <p className="text-sm text-black/85 mb-3">{item.description}</p>
                 <div className="space-y-2 text-sm">
                   <p>
                     <span className="font-semibold text-blue-950">Category:</span> {item.category}
@@ -156,21 +156,21 @@ export default function ItemCatalogTemplate({
               <ShieldCheck size={20} />
             </div>
             <h3 className="text-xl font-semibold mb-2">Quality Assurance</h3>
-            <p className="text-blue-900/80">Top-grade items with verified specifications and dependable quality checks before release.</p>
+            <p className="text-black/85">Top-grade items with verified specifications and dependable quality checks before release.</p>
           </article>
           <article className="rounded-xl border border-blue-200 bg-blue-50/60 p-5">
             <div className="inline-flex h-10 w-10 rounded-full bg-blue-100 text-blue-800 items-center justify-center mb-3">
               <Truck size={20} />
             </div>
             <h3 className="text-xl font-semibold mb-2">Reliable Fulfillment</h3>
-            <p className="text-blue-900/80">Structured delivery coordination aligned with project timelines and operational requirements.</p>
+            <p className="text-black/85">Structured delivery coordination aligned with project timelines and operational requirements.</p>
           </article>
           <article className="rounded-xl border border-blue-200 bg-blue-50/60 p-5">
             <div className="inline-flex h-10 w-10 rounded-full bg-blue-100 text-blue-800 items-center justify-center mb-3">
               <CheckCircle2 size={20} />
             </div>
             <h3 className="text-xl font-semibold mb-2">After-Sales Support</h3>
-            <p className="text-blue-900/80">Responsive support team ready to assist with product guidance and follow-through service.</p>
+            <p className="text-black/85">Responsive support team ready to assist with product guidance and follow-through service.</p>
           </article>
         </div>
       </section>
@@ -216,3 +216,4 @@ export default function ItemCatalogTemplate({
     </div>
   );
 }
+
