@@ -1,4 +1,9 @@
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import qualityImage from "../assets/img/core-values/quality.jpg";
+import customerOrientationImage from "../assets/img/core-values/customerOrientation.jpg";
+import flexibilityImage from "../assets/img/core-values/flexibility.jpg";
+import transparencyImage from "../assets/img/core-values/transparency.jpg";
+import optimizationImage from "../assets/img/core-values/optimization.jpg";
 
 export default function CoreValues() {
   const values = ['Quality', 'Customer Orientation', 'Flexibility', 'Transparency', 'Optimization'];
@@ -9,7 +14,7 @@ export default function CoreValues() {
       description:
         'We uphold rigorous standards in every phase of delivery to ensure reliable performance, safety, and long-term value for our clients.',
       image:
-        '',
+        qualityImage,
     },
     {
       key: 'customer-orientation',
@@ -17,7 +22,7 @@ export default function CoreValues() {
       description:
         'Our planning and execution are shaped by client priorities, making sure solutions are aligned with business goals, timelines, and operational realities.',
       image:
-        '',
+        customerOrientationImage,
     },
     {
       key: 'flexibility',
@@ -25,7 +30,7 @@ export default function CoreValues() {
       description:
         'We adapt quickly to changing site conditions and project requirements while keeping quality, safety, and delivery outcomes fully controlled.',
       image:
-        '',
+        flexibilityImage,
     },
     {
       key: 'transparency',
@@ -33,7 +38,7 @@ export default function CoreValues() {
       description:
         'We maintain clear communication, visible reporting, and accountable processes so clients can make informed decisions at every stage.',
       image:
-        '',
+        transparencyImage,
     },
     {
       key: 'optimization',
@@ -41,7 +46,7 @@ export default function CoreValues() {
       description:
         'We continuously improve workflows, resources, and technical approaches to maximize efficiency, reduce risk, and strengthen project outcomes.',
       image:
-        '',
+        optimizationImage,
     },
   ];
 

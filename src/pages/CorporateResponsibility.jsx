@@ -1,4 +1,7 @@
 import { ArrowRight, HeartHandshake, Leaf, ShieldCheck } from 'lucide-react';
+import sheFirstImage from "../assets/img/corporate-responsibility/sheFirst.jpg";
+import voluntaryImage from "../assets/img/corporate-responsibility/voluntary.jpg";
+import outstandingQualityImage from "../assets/img/corporate-responsibility/outstandingQuality.jpg";
 
 export default function CorporateResponsibility() {
   return (
@@ -75,7 +78,7 @@ export default function CorporateResponsibility() {
           <div className="grid lg:grid-cols-12 gap-6 mb-10">
             <article className="lg:col-span-5 rounded-2xl border border-blue-100 overflow-hidden bg-blue-950 text-white">
               <img
-                src=""
+                src={sheFirstImage}
                 alt="Safety and health in industrial operations"
                 className="h-64 sm:h-72 w-full object-cover"
               />
@@ -134,7 +137,7 @@ export default function CorporateResponsibility() {
               <div className="lg:col-span-5">
                 <div className="rounded-xl overflow-hidden border border-blue-200">
                   <img
-                    src=""
+                    src={voluntaryImage}
                     alt="Community volunteer social responsibility programs"
                     className="h-72 w-full object-cover"
                   />
@@ -151,7 +154,7 @@ export default function CorporateResponsibility() {
           <div className="grid lg:grid-cols-12 gap-8 items-stretch">
             <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-blue-200">
               <img
-                src=""
+                src={outstandingQualityImage}
                 alt="Industrial service planning and implementation"
                 className="h-full min-h-[320px] w-full object-cover"
               />
