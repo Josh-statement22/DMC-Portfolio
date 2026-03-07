@@ -243,28 +243,23 @@ export default function Home() {
     'After-Sales Service',
     'Accreditation-Ready Documents',
   ];
-  const differentiators = [
-    {
-      title: 'Execution Discipline',
-      value: '98%',
-      detail: 'On-time milestone performance across managed project scopes.',
-    },
-    {
-      title: 'Technical Depth',
-      value: '120+',
-      detail: 'Engineers and specialists supporting complex environments.',
-    },
-    {
-      title: 'Mobilization Speed',
-      value: '72 hrs',
-      detail: 'Average deployment window for urgent operational requirements.',
-    },
-    {
-      title: 'Quality Assurance',
-      value: '100%',
-      detail: 'Inspection-driven delivery process from planning to turnover.',
-    },
-  ];
+ const differentiators = [
+  {
+    title: "Trusted Partnerships",
+    value: "Reliable Relationships",
+    detail: "We build strong, lasting connections with our clients and business partners through consistent service and quality."
+  },
+  {
+    title: "Technical Expertise",
+    value: "Expert Solutions",
+    detail: "Our team of engineers and specialists deliver top-quality materials and solutions for Construction, Power Plant, Mining, and Industrial projects."
+  },
+  {
+    title: "Quality & Reliability",
+    value: "Excellence Delivered",
+    detail: "From planning to turnover, we ensure every project meets the highest standards with a focus on thorough quality assurance."
+  }
+];
   const legalCredentialSlots = [
     'SEC Registration',
     'BIR Certificate of Registration',
@@ -395,46 +390,46 @@ export default function Home() {
       {sectionDivider}
 
       {/* 3. Why DMC */}
-      <section className={`${ui.section} bg-white`}>
-        <div className={ui.container}>
-          <div className="grid lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-7">
-              <p className="text-5xl sm:text-6xl lg:text-7xl uppercase tracking-[0.06em] text-blue-800 font-black leading-none">WHY DMC?</p>
-              <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black text-blue-950 tracking-tight leading-[0.92]">
-                Built for reliability when every delivery matters.
-              </h2>
-              <div className="mt-6 h-1.5 w-36 rounded-full bg-blue-700" />
-              <div className="mt-8 space-y-5">
-                {differentiators.map((item) => (
-                  <div key={item.title}>
-                    <p className="text-3xl sm:text-4xl font-extrabold text-blue-900">{item.value}</p>
-                    <p className="text-sm uppercase tracking-[0.16em] text-black font-semibold mt-1">{item.title}</p>
-                    <p className="text-black/85 leading-relaxed mt-1">{item.detail}</p>
-                  </div>
-                ))}
-              </div>
+<section className={`${ui.section} bg-white`}>
+  <div className={ui.container}>
+    <div className="grid lg:grid-cols-12 gap-10 items-center">
+      <div className="lg:col-span-7">
+        <p className="text-5xl sm:text-6xl lg:text-7xl uppercase tracking-[0.06em] text-blue-800 font-black leading-none">WHY DMC?</p>
+        <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black text-blue-950 tracking-tight leading-[0.92]">
+          Built for reliability when every delivery matters.
+        </h2>
+        <div className="mt-6 h-1.5 w-36 rounded-full bg-blue-700" />
+        <div className="mt-8 space-y-5">
+          {differentiators.map((item) => (
+            <div key={item.title}>
+              <p className="text-3xl sm:text-4xl font-extrabold text-blue-900">{item.value}</p>
+              <p className="text-sm uppercase tracking-[0.16em] text-black font-semibold mt-1">{item.title}</p>
+              <p className="text-black/85 leading-relaxed mt-1">{item.detail}</p>
             </div>
+          ))}
+        </div>
+      </div>
 
             <div className="lg:col-span-5">
-              <div className="relative overflow-hidden rounded-3xl border border-blue-200">
-                <img
-                  src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=80"
-                  alt="DMC engineering and field execution"
-                  className="h-[560px] w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-950/75 via-blue-950/20 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                  <p className="text-white text-xs uppercase tracking-[0.16em] font-semibold mb-2">Execution Standard</p>
-                  <p className="text-blue-100 leading-relaxed">
-                    Disciplined planning, field-ready response, and quality-focused delivery from start to turnover.
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="relative overflow-hidden rounded-3xl border border-blue-200">
+          <img
+            src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=80"
+            alt="DMC engineering and field execution"
+            className="h-[560px] w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-blue-950/75 via-blue-950/20 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 p-6">
+            <p className="text-white text-xs uppercase tracking-[0.16em] font-semibold mb-2">Our Commitment</p>
+            <p className="text-blue-100 leading-relaxed">
+              From planning to execution, we deliver projects with <strong>expert precision, reliability, and quality</strong> you can trust.
+            </p>
           </div>
         </div>
-      </section>
-      {sectionDivider}
+      </div>
+    </div>
+  </div>
+</section>
+{sectionDivider}
 
       {/* 4. Featured Projects / Case Studies */}
       <section className={`${ui.section} bg-white`}>

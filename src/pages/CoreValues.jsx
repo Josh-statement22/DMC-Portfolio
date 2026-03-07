@@ -1,47 +1,50 @@
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Award, Users, Zap, Eye, Gauge } from 'lucide-react';
+import qualityImg from '../assets/img/about/quality.jpg';
 
 export default function CoreValues() {
-  const values = ['Quality', 'Customer Orientation', 'Flexibility', 'Transparency', 'Optimization'];
+  const values = [
+    { name: 'Quality', icon: Award },
+    { name: 'Customer Orientation', icon: Users },
+    { name: 'Flexibility', icon: Zap },
+    { name: 'Transparency', icon: Eye },
+    { name: 'Optimization', icon: Gauge },
+  ];
+
   const valueSections = [
     {
       key: 'quality',
       title: 'Quality',
       description:
-        'We uphold rigorous standards in every phase of delivery to ensure reliable performance, safety, and long-term value for our clients.',
-      image:
-        '',
+        'Outstanding quality and greatest care. Materials specifically selected for a long lifetime.',
+      image: qualityImg,
     },
     {
       key: 'customer-orientation',
       title: 'Customer Orientation',
       description:
-        'Our planning and execution are shaped by client priorities, making sure solutions are aligned with business goals, timelines, and operational realities.',
-      image:
-        '',
+        'Quick and flexible solutions for any market requirement, always focused on client needs and priorities.',
+      image: qualityImg,
     },
     {
       key: 'flexibility',
       title: 'Flexibility',
       description:
-        'We adapt quickly to changing site conditions and project requirements while keeping quality, safety, and delivery outcomes fully controlled.',
-      image:
-        '',
+        'Adaptable to changing conditions while maintaining high standards of safety, quality, and efficiency.',
+      image: qualityImg,
     },
     {
       key: 'transparency',
       title: 'Transparency',
       description:
-        'We maintain clear communication, visible reporting, and accountable processes so clients can make informed decisions at every stage.',
-      image:
-        '',
+        'Clear communication, visible reporting, and accountable processes for informed decision-making.',
+      image: qualityImg,
     },
     {
       key: 'optimization',
       title: 'Optimization',
       description:
-        'We continuously improve workflows, resources, and technical approaches to maximize efficiency, reduce risk, and strengthen project outcomes.',
-      image:
-        '',
+        'Continuous improvement of workflows, resources, and approaches to maximize efficiency and outcomes.',
+      image: qualityImg,
     },
   ];
 
@@ -50,7 +53,7 @@ export default function CoreValues() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
         <img
-          src=""
+          src={qualityImg}
           alt="Engineer inspecting large-scale infrastructure"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -64,13 +67,13 @@ export default function CoreValues() {
                 Philosophy, Mission, and Responsibility
               </p>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.96] max-w-4xl">
-                Customer-Driven Values That Guide Every Delivery.
+                PHILOSOPHY – MISSION AND RESPONSIBILITY
               </h1>
               <p className="text-lg sm:text-xl text-slate-200 max-w-3xl leading-relaxed">
                 D. Michael Co (DMC) Enterprises Corp. focuses on activities that are strictly oriented to customer needs and requirements.
               </p>
               <p className="text-base sm:text-lg text-blue-100 max-w-3xl leading-relaxed">
-                From the analysis of customer needs, through to the development of solutions, products, training, and service.
+                From the analysis of customer needs, through to the development of solutions, products, training, and service, DMC offers everything from a single source.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button className="px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 rounded-md font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-lg shadow-slate-950/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">
@@ -82,15 +85,20 @@ export default function CoreValues() {
             <div className="lg:col-span-5">
               <div className="w-full max-w-md ml-auto rounded-xl border border-white/20 bg-blue-950/35 backdrop-blur-md p-6 sm:p-7 shadow-2xl shadow-blue-950/50">
                 <p className="text-xs uppercase tracking-[0.2em] text-blue-100/80 mb-5">
-                  Core Values
+                  Values
                 </p>
                 <div className="space-y-3">
-                  {values.map((value) => (
-                    <div key={value} className="flex items-start gap-3 pb-3 border-b border-white/15 last:border-b-0 last:pb-0">
-                      <CheckCircle2 size={18} className="text-blue-100 mt-0.5 shrink-0" />
-                      <p className="text-white font-medium">{value}</p>
-                    </div>
-                  ))}
+                  {values.map((value) => {
+                    const IconComponent = value.icon;
+                    return (
+                      <div key={value.name} className="flex items-center gap-3 pb-3 border-b border-white/15 last:border-b-0 last:pb-0">
+                        <div className="w-6 h-6 shrink-0">
+                          <IconComponent size={24} className="text-blue-300" />
+                        </div>
+                        <p className="text-white font-medium">{value.name}</p>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -103,19 +111,27 @@ export default function CoreValues() {
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mb-14">
             <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-black font-semibold mb-4">
-              Values in Action
+              Sustainability & Company Policy
             </p>
             <h2 className="text-4xl sm:text-5xl font-bold text-blue-950 tracking-tight leading-tight mb-6">
-              Our Core Values in Every Engagement
+              Our Commitment in Action
             </h2>
+            <p className="text-lg text-black/85 leading-relaxed mb-6">
+              COMPANY POLICY: The greatest possible safety, optimal protection of health, and protection of the environment are at the heart of our activities.
+            </p>
+            <p className="text-lg text-black/85 leading-relaxed mb-6">
+              SOCIAL RESPONSIBILITY: Responsibility for social issues is an increasingly important subject. Our staff is involved voluntarily in various social projects.
+            </p>
             <p className="text-lg text-black/85 leading-relaxed">
-              From the analysis of customer needs, through to the development of solutions, products, training and
-              service, these values define how DMC delivers measurable and trusted results.
+              OUR SERVICE: Outstanding quality and greatest care. Quick and flexible solutions for any market requirement. Local implementation.
             </p>
           </div>
 
           <div className="space-y-10">
-            {valueSections.map((item, index) => (
+            {valueSections.map((item, index) => {
+              const valueData = values.find(v => v.name.toLowerCase().includes(item.key.split('-')[0])) || values[index];
+              const IconComponent = valueData.icon;
+              return (
               <article
                 key={item.key}
                 className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch rounded-2xl border border-blue-100 bg-blue-50/30 p-4 sm:p-6"
@@ -128,12 +144,16 @@ export default function CoreValues() {
                 <div className={`lg:col-span-7 flex ${index % 2 !== 0 ? 'lg:order-1' : ''}`}>
                   <div className="rounded-xl border border-blue-200 bg-white p-6 sm:p-8 w-full flex flex-col justify-center">
                     <p className="text-xs uppercase tracking-[0.2em] text-black font-semibold mb-3">Core Value</p>
-                    <h3 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">{item.title}</h3>
+                    <div className="flex items-center gap-3 mb-4">
+                      <IconComponent size={36} className="text-blue-950" />
+                      <h3 className="text-3xl sm:text-4xl font-bold text-blue-950">{item.title}</h3>
+                    </div>
                     <p className="text-black/85 text-lg leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -148,17 +168,15 @@ export default function CoreValues() {
             One Value System. One Standard of Delivery.
           </h2>
           <p className="text-blue-100 text-lg leading-relaxed max-w-4xl mx-auto mb-8">
-            Quality, Customer Orientation, Flexibility, Transparency, and Optimization work together as a single
-            operating principle. These values guide DMC from the analysis of customer needs through the development
-            of solutions, products, training, and service.
+            Quality, Customer Orientation, Flexibility, Transparency, and Optimization work together as a single operating principle. These values guide DMC from the analysis of customer needs through the development of solutions, products, training, and service.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {values.map((value) => (
               <span
-                key={`summary-${value}`}
+                key={`summary-${value.name}`}
                 className="px-4 py-2 rounded-full border border-white/30 bg-white/10 text-sm sm:text-base font-medium"
               >
-                {value}
+                {value.name}
               </span>
             ))}
           </div>
@@ -167,4 +185,3 @@ export default function CoreValues() {
     </div>
   );
 }
-

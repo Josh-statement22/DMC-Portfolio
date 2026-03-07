@@ -4,96 +4,142 @@ export default function FinishedContracts() {
   const projects = [
     {
       id: 1,
-      client: "San Miguel",
-      project: "Bulk Terminal Expansion",
-      segment: "Infrastructure",
+      client: "Department of Agiculture - Region XII",
+      project: "Koronadal City, South Cotabato",
+      year: "2021",
       description:
-        "Delivered structural and mechanical scopes for a high-capacity terminal expansion with strict safety and scheduling controls.",
-      cover: "",
+        "Supply and Delivery of Garden Tools.",
+      cover: "src/assets/img/contracts/agriculture.jpg",
+      dateAwarded: "December 31, 2021",
+      contractEffectivity: "January 27, 2021",
       gallery: [
-        "",
-        "",
-        "",
+        "src/assets/img/contracts/agriculture.jpg",
+        "src/assets/img/contracts/agriculture.jpg",
+        "src/assets/img/contracts/agriculture.jpg",
       ],
     },
     {
       id: 2,
-      client: "Aboitiz",
-      project: "Power Plant Retrofit",
-      segment: "Power",
+      client: "Provincial Government of Aurora",
+      project: "Baler, Aurora",
+      year: "2022",
       description:
-        "Implemented retrofit works for critical plant systems to improve reliability, maintainability, and performance.",
-      cover: "",
+        "P.O Number 2022-02-117",
+      cover: "src/assets/img/contracts/aurora.jpg",
+      dateAwarded: "February 2, 2022",
+      contractEffectivity: "February 2, 2022",
       gallery: [
-        "",
-        "",
-        "",
+        "src/assets/img/contracts/aurora.jpg",
+        "src/assets/img/contracts/aurora.jpg",
+        "src/assets/img/contracts/aurora.jpg",
       ],
     },
     {
       id: 3,
-      client: "DMCI",
-      project: "Bridge Structural Works",
-      segment: "Infrastructure",
+      client: "Bicol Regional Training and Teaching Hospital",
+      project: "Legazpi City",
+      year: "2022",
       description:
-        "Completed structural reinforcement and steel integration packages for a major bridge modernization contract.",
-      cover: "",
+        "Procurement of Janitorial Supplies",
+      cover: "src/assets/img/contracts/hospital.jpg",
+      dateAwarded: "February 10, 2022",
+      contractEffectivity: "March 03, 2022",
       gallery: [
-        "",
-        "",
-        "",
+        "src/assets/img/contracts/hospital.jpg",
+        "src/assets/img/contracts/hospital.jpg",
+        "src/assets/img/contracts/hospital.jpg",
       ],
     },
     {
       id: 4,
-      client: "Meralco",
-      project: "Grid Upgrade Package",
-      segment: "Power",
+      client: "Department of Trade and Industry - Region V",
+      project: "Legazpi City",
+      year: "2022",
       description:
-        "Executed phased grid upgrade activities with minimal downtime and full compliance with utility standards.",
-      cover: "",
+        "Supply and Delivery of Livelihood Seeding Program - Negosyo Serbisyo Sa Barangay Kits in the Province of Camarines Sur",
+      cover: "src/assets/img/contracts/livelihood.jpg",
+      dateAwarded: "January 28, 2022",
+      contractEffectivity: "February 21, 2022",
       gallery: [
-        "",
-        "",
-        "",
+        "src/assets/img/contracts/livelihood.jpg",
+        "src/assets/img/contracts/livelihood.jpg",
+        "src/assets/img/contracts/livelihood.jpg",
       ],
     },
     {
       id: 5,
-      client: "EEI",
-      project: "Industrial Piping Works",
-      segment: "Industrial",
+      client: "Provincial Government ofAurora",
+      project: "Baler, Aurora",
+      year: "2022",
       description:
-        "Delivered complete piping system installation for process lines, including supports, valves, and commissioning support.",
-      cover: "",
+        "P.O Number 2022-05-1040",
+      cover: "src/assets/img/contracts/aurora.jpg",
+      dateAwarded: "May 2, 2022",
+      contractEffectivity: "May 2, 2022",
       gallery: [
-        "",
-        "",
-        "",
+        "src/assets/img/contracts/aurora.jpg",
+        "src/assets/img/contracts/aurora.jpg",
+        "src/assets/img/contracts/aurora.jpg",
       ],
     },
     {
       id: 6,
-      client: "JGC Philippines",
-      project: "Process Facility Buildout",
-      segment: "Industrial",
+      client: "Ministry of Agriculture, Fisheries, and Agrarian Reform",
+      project: "Cotabato City",
+      year: "2022",
       description:
-        "Supported end-to-end facility buildout from civil interfaces to mechanical completion and turnover readiness.",
-      cover: "",
+        "Procurement of SFI Bottom Stake for Basilan Under GAAB 2021",
+      cover: "src/assets/img/contracts/agriculture.jpg",
+      dateAwarded: "March 21, 2022",
+      contractEffectivity: "April 19, 2022",
       gallery: [
-        "",
-        "",
-        "",
+        "src/assets/img/contracts/agriculture.jpg",
+        "src/assets/img/contracts/agriculture.jpg",
+        "src/assets/img/contracts/agriculture.jpg",
       ],
     },
     {
       id: 7,
-      client: "Ayala",
-      project: "Mixed-Use Utility Works",
-      segment: "Commercial",
+      client: "Municipality of Itbayat",
+      project: "tbayat, Batanes",
+      year: "2022",
       description:
-        "Delivered utility and systems installation across a mixed-use development with tight interface coordination.",
+        "Purchase and Delivery of Construction Materials",
+      cover: "src/assets/img/contracts/livelihood.jpg",
+      dateAwarded: "June 24, 2022",
+      contractEffectivity: "July 06, 2022",
+      gallery: [
+        "src/assets/img/contracts/livelihood.jpg",
+        "src/assets/img/contracts/livelihood.jpg",
+        "src/assets/img/contracts/livelihood.jpg",
+      ],
+    },
+    {
+      id: 8,
+      client: "Zamboanga City Medical Center",
+      project: "Zamboanga City",
+      year: "2022",
+      description:
+        "dSupply and Delivery of Office and Janitorial Supplies Under Common Use Supplies",
+      cover: "src/assets/img/contracts/hospital.jpg",
+      dateAwarded: "July 15, 2022",
+      contractEffectivity: "July 19, 2022",
+      gallery: [
+        "src/assets/img/contracts/hospital.jpg",
+        "src/assets/img/contracts/hospital.jpg",
+        "src/assets/img/contracts/hospital.jpg",
+      ],
+    },
+    {
+      id: 9,
+      client: "Department of Public Works and Highways",
+      project: "Various Provinces",
+      year: "2023",
+      description:
+        "Infrastructure Development and Maintenance Projects",
       cover: "",
+      dateAwarded: "",
+      contractEffectivity: "",
       gallery: [
         "",
         "",
@@ -101,13 +147,15 @@ export default function FinishedContracts() {
       ],
     },
     {
-      id: 8,
-      client: "Megawide",
-      project: "Transport Corridor Package",
-      segment: "Infrastructure",
+      id: 10,
+      client: "Bureau of Energy Development",
+      project: "National Energy Projects",
+      year: "2024",
       description:
-        "Completed core transport corridor scopes with controlled sequencing and high field productivity standards.",
+        "Energy Sector Implementation and Support Services",
       cover: "",
+      dateAwarded: "",
+      contractEffectivity: "",
       gallery: [
         "",
         "",
@@ -118,9 +166,9 @@ export default function FinishedContracts() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeSlide, setActiveSlide] = useState(0);
-  const filters = ["All", ...new Set(projects.map((item) => item.segment))];
+  const filters = ["All", ...new Set(projects.map((item) => item.year))];
   const filteredProjects =
-    activeFilter === "All" ? projects : projects.filter((item) => item.segment === activeFilter);
+    activeFilter === "All" ? projects : projects.filter((item) => item.year === activeFilter);
   const openProject = (project) => {
     setSelectedProject(project);
     setActiveSlide(0);
@@ -206,7 +254,7 @@ export default function FinishedContracts() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-950/75 via-blue-950/10 to-transparent" />
                   <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 text-blue-900 text-xs font-semibold">
-                    {item.segment}
+                    {item.year}
                   </span>
                 </div>
                 <div className="p-4 sm:p-5">
@@ -273,10 +321,24 @@ export default function FinishedContracts() {
               </div>
 
               <div className="lg:col-span-4 p-6 sm:p-7">
-                <p className="text-xs uppercase tracking-[0.14em] text-black font-semibold mb-3">{selectedProject.segment}</p>
+                <p className="text-xs uppercase tracking-[0.14em] text-black font-semibold mb-3">Year: {selectedProject.year}</p>
                 <h2 className="text-2xl font-bold text-blue-950 mb-2">{selectedProject.client}</h2>
                 <p className="text-blue-800 font-semibold mb-4">{selectedProject.project}</p>
                 <p className="text-black/85 leading-relaxed mb-6">{selectedProject.description}</p>
+                {(selectedProject.dateAwarded || selectedProject.contractEffectivity) && (
+                  <div className="mb-6 pb-6 border-b border-blue-200">
+                    {selectedProject.dateAwarded && (
+                      <p className="text-sm text-black/85 mb-2">
+                        <span className="font-semibold text-blue-950">Date Awarded:</span> {selectedProject.dateAwarded}
+                      </p>
+                    )}
+                    {selectedProject.contractEffectivity && (
+                      <p className="text-sm text-black/85">
+                        <span className="font-semibold text-blue-950">Contract Effectivity:</span> {selectedProject.contractEffectivity}
+                      </p>
+                    )}
+                  </div>
+                )}
                 <div className="grid grid-cols-3 gap-2">
                   {selectedProject.gallery.map((image, index) => (
                     <button

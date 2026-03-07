@@ -13,7 +13,8 @@ function Contact() {
       title: "Email",
       detail: "business@dmc-enterprises.com",
       note: "For proposals and technical inquiries",
-    },
+    },   
+    
     {
       icon: <MapPin size={18} />,
       title: "Office",

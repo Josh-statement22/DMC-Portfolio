@@ -1,33 +1,21 @@
 function OrganizationalStructure() {
-  const levelTwo = ["Operations Division", "Commercial Division", "Corporate Services"];
-  const levelThree = [
-    "Engineering & Technical",
-    "Project Management",
-    "Procurement & Supply",
-    "Quality, HSE & Compliance",
-    "Finance & Administration",
-    "Human Resources",
-  ];
   const legalCertifications = [
-    {
-      key: "sec-registration",
-      title: "SEC Registration",
-      image: "",
-    },
-    {
-      key: "bir-certificate",
-      title: "BIR Certificate",
-      image: "",
-    },
-    {
-      key: "business-permit",
-      title: "Business Permit",
-      image: "",
-    },
+    { key: "sec-registration", title: "SEC Registration", image: "" },
+    { key: "bir-certificate", title: "BIR Certificate", image: "" },
+    { key: "business-permit", title: "Business Permit", image: "" },
   ];
+
+  const PersonBox = ({ name, title, image }) => (
+    <div className="rounded-xl border border-blue-200 bg-blue-50 px-4 py-4 text-center min-w-[180px] shadow-sm relative">
+      {image && <img src={image} alt={name} className="h-16 w-16 mx-auto rounded-full mb-2 object-cover" />}
+      <p className="font-semibold text-blue-950">{name}</p>
+      <p className="text-sm text-blue-700">{title}</p>
+    </div>
+  );
 
   return (
     <div className="bg-white text-blue-950">
+      {/* HEADER */}
       <section className="relative min-h-[55vh] flex items-center px-4 sm:px-6 lg:px-8 overflow-hidden">
         <img
           src=""
@@ -49,6 +37,7 @@ function OrganizationalStructure() {
         </div>
       </section>
 
+      {/* ORGANIZATIONAL CHART */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50/40">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
@@ -58,48 +47,102 @@ function OrganizationalStructure() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-blue-200 bg-white p-6 sm:p-8">
-            <div className="flex justify-center">
-              <div className="rounded-xl border border-blue-700 bg-blue-700 text-white px-6 py-4 text-center min-w-[240px]">
-                <p className="text-xs tracking-[0.14em] uppercase text-blue-100">Top Management</p>
-                <p className="text-xl font-bold mt-1">Board & President</p>
+          <div className="rounded-2xl border border-blue-200 bg-white p-6 sm:p-8 overflow-y-auto" style={{ minHeight: '800px', maxHeight: '1000px' }}>
+            
+            {/* CEO */}
+            <div className="flex justify-center mb-12 relative">
+              <PersonBox name="Marilou Adan Co" title="CEO/President" />
+            </div>
+
+            {/* Layer 2 */}
+            <div className="flex justify-between mb-12 relative">
+              <PersonBox name="Jennifer R. Mangao" title="Sales Supervisor" />
+              <PersonBox name="Gerlie Dumayag" title="HR Consultant" />
+              <PersonBox name="Princes A. Tenoso" title="Corporate Secretary / Sales Supervisor" />
+              <PersonBox name="Atty. Kevin Escobar" title="Legal Counsel" />
+              <PersonBox name="Alex B. Adan" title="Team Leader Logistic Support" />
+              <PersonBox name="Esperanza C. Ricalde" title="Sales Supervisor" />
+            </div>
+
+            {/* Layer 3 */}
+            <div className="flex justify-between mb-12 relative">
+              <div className="flex-1 flex justify-center relative">
+                {/* Jennifer's child - Gilbert */}
+                <PersonBox name="Gilbert De Sagun" title="Logistic Support" />
+                {/* Line to Gilbert */}
+                <div className="absolute top-0 left-1/2 w-px h-full bg-blue-500 -translate-x-1/2" />
+              </div>
+
+              <div className="flex-1 flex justify-center relative">
+                {/* Christine under Jennifer */}
+                <PersonBox name="Christine M. Rodriguez" title="Senior Sales/ Admin Supervisor" />
+                {/* Lines to Christine's children */}
+              </div>
+
+              <div className="flex-1"></div>
+
+              <div className="flex-1 flex justify-center relative">
+                {/* Maria under Princes */}
+                <PersonBox name="Maria Janna Ivy A. Montejo" title="Accounting (AR-AP) OIC" />
+              </div>
+
+              <div className="flex-1"></div>
+
+              <div className="flex-1 flex justify-center relative">
+                {/* Joshua under Alex */}
+                <PersonBox name="Joshua Rivera" title="Team Leader-Sales/Logistic" />
+              </div>
+
+              <div className="flex-1"></div>
+            </div>
+
+            {/* Layer 4 */}
+            <div className="flex justify-between mb-12 relative">
+              {/* Christine's children */}
+              <div className="flex-1"></div>
+              <div className="flex-1 flex justify-center gap-4">
+                <PersonBox name="Jinky Anac-anac" title="Sales Support" />
+                <PersonBox name="Grace Marasigan" title="Admin Support" />
+              </div>
+
+              <div className="flex-1"></div>
+
+              {/* Maria's children */}
+              <div className="flex-1 flex justify-center gap-4">
+                <PersonBox name="Jennifer Adier" title="Accounting Support" />
+                <PersonBox name="Paul Andrei Rivera" title="Admin Support" />
+              </div>
+
+              <div className="flex-1"></div>
+
+              {/* Joshua's children */}
+              <div className="flex-1 flex justify-center gap-4">
+                <PersonBox name="Bryan Clanza" title="Logistic Support" />
+                <PersonBox name="Allan Macariola" title="Logistic Support" />
+              </div>
+
+              <div className="flex-1"></div>
+
+              {/* Esperanza's child */}
+              <div className="flex-1 flex justify-center">
+                <PersonBox name="Jemhierose Robles" title="Sales Support" />
               </div>
             </div>
 
-            <div className="h-8 w-px bg-blue-300 mx-auto" />
-
-            <div className="grid md:grid-cols-3 gap-4 relative">
-              {levelTwo.map((item) => (
-                <div key={item} className="rounded-xl border border-blue-200 bg-blue-50 px-4 py-4 text-center">
-                  <p className="font-semibold text-blue-950">{item}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="h-8 w-px bg-blue-300 mx-auto" />
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {levelThree.map((item) => (
-                <div key={item} className="rounded-xl border border-blue-100 bg-white px-4 py-4 text-center shadow-sm">
-                  <p className="text-blue-900 font-medium">{item}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
 
+      {/* LEGAL CERTIFICATIONS */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-blue-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-black font-semibold mb-4">
-              Compliance
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-3">Legal Certifications</h2>
-            <p className="text-black/85 max-w-3xl mx-auto">
-              Ready section for your permits and legal certifications. Replace the placeholder images with your actual documents.
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="uppercase tracking-[0.24em] text-xs sm:text-sm text-black font-semibold mb-4">
+            Compliance
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-3">Legal Certifications</h2>
+          <p className="text-black/85 max-w-3xl mx-auto mb-10">
+            Ready section for your permits and legal certifications. Replace the placeholder images with your actual documents.
+          </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {legalCertifications.map((item) => (
@@ -121,4 +164,3 @@ function OrganizationalStructure() {
 }
 
 export default OrganizationalStructure;
-
